@@ -61,9 +61,15 @@ slide_w, slide_h = 13.333, 7.5
 sidebar_w = 0.70
 left, right = 1.05, 12.40
 width = right - left
-body_top, body_bottom = 1.45, 5.85
-takeaway_y, takeaway_h = 6.00, 0.52
-source_y = 6.66
+margin = 0.35            # top of the eyebrow line = bottom of the source line, from the slide edge
+gap = 0.27               # one vertical and horizontal rhythm for every block
+rule_y = 1.18
+body_top = rule_y + gap                       # 1.45
+source_h = 0.22
+source_y = slide_h - margin - source_h        # 6.93
+takeaway_h = 0.50
+takeaway_y = source_y - gap - takeaway_h      # 6.16
+body_bottom = takeaway_y - gap                # 5.89
 
 questions = {
     "statements": ("DCCD", "The strategy in four statements"),
@@ -111,26 +117,25 @@ class StrategyDeck(lc.Deck):
         lc.text(s, 1.35, 3.25, 10.5, 0.5, subtitle, 20, rose, line=1.0)
         lc.text(s, 1.35, 4.10, 10.5, 0.4, by, 14, white, line=1.0)
         lc.text(s, 1.35, 4.50, 10.5, 0.4, datetime.date.today().strftime("%B %Y"), 12, blush, line=1.0)
-        lc.hline(s, 1.35, 5.71, 4.2, rose, 2.0)
+        lc.hline(s, 1.35, 5.05, 4.2, rose, 2.0)
         lc.rect(s, sidebar_w, 6.15, slide_w - sidebar_w, slide_h - 6.15, fill=white)
         lc.picture_fit(s, os.path.join(brand_dir, "tepper-T.png"), 1.35, 6.38, 0.85, 0.85, align="l")
-        lc.text(s, 6.0, 6.55, 6.4, 0.45, "Define  |  Create  |  Capture  |  Deliver", 13, iron, align="r",
-                anchor="m", line=1.0)
         self.meta[s.slide_id]["n_furniture"] = len(s.shapes)
         return s
 
     def page(self, key, title, src):
         s = self._new("page", title=title)
         s.shapes.add_picture(os.path.join(brand_dir, "tartan-strip.png"), 0, 0, Inches(sidebar_w), Inches(slide_h))
-        lc.picture_fit(s, os.path.join(brand_dir, "tepper-T.png"), 12.42, 0.30, 0.66, 0.66)
+        lc.picture_fit(s, os.path.join(brand_dir, "tepper-T.png"), 12.48, margin, 0.60, 0.60, align="r")
         stage, question = questions[key]
-        eb = lc.text(s, left, 0.30, width - 0.6, 0.28, f"**{stage}**   {question}", 10.5, gray, line=1.0)
+        eb = lc.text(s, left, margin, width - 0.6, 0.24, f"**{stage}**   {question}", 10.5, gray, line=1.0)
         eb.text_frame.paragraphs[0].runs[0].font.color.rgb = eyebrow_fill[stage]
         size = 26 if lc._text_w(title, 26, True) <= width - 0.4 else 22
-        lc.text(s, left, 0.58, width - 0.4, 0.50, title, size, red, bold=True, anchor="m", line=1.0, wrap=False)
-        lc.hline(s, left - 0.05, 1.18, right, lc.rule, 0.75)
-        lc.text(s, left, source_y, width - 1.0, 0.24, src, 9, gray, italic=True, line=1.0)
-        lc.text(s, right - 0.6, 6.95, 0.6, 0.3, str(len(self.prs.slides)), 9, gray, align="r", anchor="m", line=1.0)
+        lc.text(s, left, 0.62, width - 0.4, 0.46, title, size, red, bold=True, anchor="m", line=1.0, wrap=False)
+        lc.hline(s, left, rule_y, right, lc.rule, 0.75)
+        lc.text(s, left, source_y, width - 1.0, source_h, src, 9, gray, italic=True, anchor="b", line=1.0)
+        lc.text(s, right - 0.6, source_y, 0.6, source_h, str(len(self.prs.slides)), 9, gray, align="r", anchor="b",
+                line=1.0)
         if lc._text_w(title, 22, True) > width - 0.4:
             self.warnings.append(f"slide {len(self.prs.slides)}: title too long: '{title}'")
         self.meta[s.slide_id]["n_furniture"] = len(s.shapes)
@@ -190,6 +195,18 @@ def fitted_table(s, y, data, col_w, max_bottom, highlight_rows=(), row_h=0.5, si
         if bottom <= max_bottom:
             break
     tbl = gf.table
+    # stretch rows evenly so the table ends exactly at max_bottom (even spacing on every slide)
+    needs = []
+    for row in tbl.rows:
+        need = Emu(row.height).inches
+        for ci, c in enumerate(row.cells):
+            nh, _ = lc._tf_need(c.text_frame, Emu(tbl.columns[ci].width).inches - 0.16)
+            need = max(need, nh + 0.12)
+        needs.append(need)
+    extra = max(0.0, (max_bottom - y) - sum(needs)) / (len(needs) - 1)
+    for ri, row in enumerate(tbl.rows):
+        row.height = Inches(needs[ri] + (extra if ri else 0))
+    bottom = y + sum(needs) + extra * (len(needs) - 1)
     for ri in highlight_rows:
         for ci in range(len(col_w)):
             c = tbl.cell(ri, ci)
@@ -209,33 +226,36 @@ def statements_slide(d, spec, src):
     s = d.page("statements", spec["titles"]["statements"], src)
     st = spec["statements"]
     rows = [(k.capitalize(), None, [st[k]]) for k in ("define", "create", "capture", "deliver")]
-    lc.band_table(s, left, body_top, width, rows, label_w=1.75, h=3.50, size=12, label_size=15)
-    tile(s, left, 5.07, width, 0.78, "Competitive advantage", spec["competitive_advantage"])
+    tile_h = 0.80
+    lc.band_table(s, left, body_top, width, rows, label_w=1.75, h=body_bottom - tile_h - gap - body_top + 0.02,
+                  size=12, label_size=15)
+    tile(s, left, body_bottom - tile_h, width, tile_h, "Competitive advantage", spec["competitive_advantage"])
     takeaway(s, spec["one_line"])
 
 
 def chain_slide(d, spec, src):
     s = d.page("chain", spec["titles"]["chain"], src)
     ch = spec["chain"]
-    cw = (width - 0.3) / 2
+    cw = (width - gap) / 2
+    ch_h = (body_bottom - body_top - gap) / 2
     for i, key in enumerate(("define", "create", "capture", "deliver")):
-        x = left + (i % 2) * (cw + 0.3)
-        y = body_top + (i // 2) * 2.27
-        card(s, x, y, cw, 2.08, key.capitalize(), stage_fill[key], ch[key], size=11.5)
+        x = left + (i % 2) * (cw + gap)
+        y = body_top + (i // 2) * (ch_h + gap)
+        card(s, x, y, cw, ch_h, key.capitalize(), stage_fill[key], ch[key], size=11.5)
     takeaway(s, spec.get("chain_takeaway") or spec["one_line"])
 
 
 def define_slide(d, spec, src):
     df = spec["define"]
     s = d.page("define", spec["titles"]["define"], src)
-    cw = (width - 0.5) / 3
+    cw = (width - 2 * gap) / 3
     cols = [("Who is the customer?", df["who"]), ("What is the offer?", df["what"]),
             ("What problem does it solve?", df["problem"])]
     for i, (head, items) in enumerate(cols):
-        x = left + i * (cw + 0.25)
+        x = left + i * (cw + gap)
         lc.rect(s, x, body_top, cw, 0.06, fill=lc.band_fills[i])
         lc.header_strip(s, x, body_top + 0.06, cw, head, h=0.55, size=15)
-        lc.dashed_items(s, x, body_top + 0.75, cw, items, size=12.5, h=3.60)
+        lc.dashed_items(s, x, body_top + 0.61 + gap, cw, items, size=12.5, h=body_bottom - body_top - 0.61 - gap)
     takeaway(s, first(df["takeaway"]))
 
 
@@ -297,8 +317,9 @@ def create_slide(d, spec, src):
     lc.header_strip(s, left, body_top, lw, "Willingness to pay vs. cost", h=0.48, size=14)
     lc.bullets(s, left + 0.12, body_top + 0.62, lw - 0.15, 2.05, cr["wtp_vs_cost"], size=11.5, gap=6)
     lc.header_strip(s, left, body_top + 2.80, lw, "Reading the map", h=0.48, size=14)
-    lc.bullets(s, left + 0.12, body_top + 3.42, lw - 0.15, 0.98, cr["map_reading"], size=11.5, gap=3)
-    positioning_map(s, cr["map"], left + lw + 0.35, body_top, width - lw - 0.35, 4.40)
+    lc.bullets(s, left + 0.12, body_top + 3.42, lw - 0.15, body_bottom - body_top - 3.42, cr["map_reading"],
+               size=11.5, gap=3)
+    positioning_map(s, cr["map"], left + lw + gap, body_top, width - lw - gap, body_bottom - body_top)
     takeaway(s, first(cr["takeaway"]))
 
 
@@ -311,8 +332,9 @@ def vri_slide(d, spec, src):
         data.append([r["resource"], r["type"], r["v"], r["r"], r["i"], r["verdict"]])
         if r.get("highlight"):
             hl.append(i)
-    _, bottom = fitted_table(s, body_top, data, [2.5, 1.35, 2.05, 1.95, 2.15, 1.35], 4.85, hl, row_h=0.62)
-    tile(s, left, max(bottom + 0.20, 4.92), width, 0.80, "Competitive advantage", spec["competitive_advantage"])
+    tile_h = 0.80
+    fitted_table(s, body_top, data, [2.5, 1.35, 2.05, 1.95, 2.15, 1.35], body_bottom - tile_h - gap, hl, row_h=0.62)
+    tile(s, left, body_bottom - tile_h, width, tile_h, "Competitive advantage", spec["competitive_advantage"])
     takeaway(s, first(cr["vri_takeaway"]))
 
 
@@ -347,7 +369,7 @@ def activities_slide(d, spec, src):
         data.append([a["activity"], a["define_link"], a["create_link"], a["capture_link"]])
         if a.get("highlight"):
             hl.append(i)
-    fitted_table(s, body_top + 1.12, data, [2.75, 2.85, 2.85, 2.9], body_bottom, hl, row_h=0.56)
+    fitted_table(s, body_top + 0.95 + gap, data, [2.75, 2.85, 2.85, 2.9], body_bottom, hl, row_h=0.56)
     takeaway(s, first(dv["activities_takeaway"]))
 
 
@@ -360,7 +382,7 @@ def fit_slide(d, spec, src):
         ("Misaligned", "what works against the position", as_list(dv.get("misaligned", ["None material"]))),
         ("Organized?", "judgment", as_list(dv.get("judgment", []))),
     ]
-    lc.band_table(s, left, body_top, width, rows, label_w=2.1, h=4.40, size=12, label_size=15)
+    lc.band_table(s, left, body_top, width, rows, label_w=2.1, h=body_bottom - body_top + 0.02, size=12, label_size=15)
     takeaway(s, first(dv["takeaway"]))
 
 
@@ -381,7 +403,7 @@ def check(d):
                 problems.append(f"slide {idx}: '{sh.name}' ends at {t + h:.2f}, into the source line")
             if sh.has_table:
                 bottom = t + table_height(sh)
-                if bottom > takeaway_y - 0.08:
+                if bottom > body_bottom + 0.02:
                     problems.append(f"slide {idx}: table grows to {bottom:.2f}in and hits the takeaway bar")
             elif sh.has_text_frame and sh.text_frame.text.strip():
                 tf = sh.text_frame
