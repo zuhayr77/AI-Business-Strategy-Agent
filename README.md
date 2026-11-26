@@ -46,7 +46,7 @@ dccd-strategy-agent/          the Claude Skill
   SKILL.md                    instructions: modes, research protocol, DCCD logic, deck rules
   scripts/build_deck.py       JSON spec -> .pptx deck
   scripts/lcp_deck.py         consulting layout components (tables, cards, tiles)
-  assets/brand/               tartan strip, Tepper T, title background
+  assets/brand/               tartan strip, Tepper T, CMU Tepper wordmark, title background
   examples/                   specs and finished decks: Nike, Capital One, Costco, Tesla, Duolingo
 docs/                         slide previews
 ```

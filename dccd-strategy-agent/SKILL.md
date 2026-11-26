@@ -177,7 +177,7 @@ In Statement mode, output only the requested statement, then one line: "Weakest 
 ## 6. Deck mode: the output deck
 
 ### 6.1 Slide list (fixed order; 8 slides, plus the title)
-Every content slide has an eyebrow line (stage word plus the lecture question it answers), a red **action title that states the finding** (not a topic), a body, a **key-takeaway bar** that closes the slide, and a source line.
+Every content slide has a red **action title that states the finding** (not a topic), a body, a **key-takeaway bar** that closes the slide, and a footer row with the CMU Tepper wordmark, the source line and the page number.
 
 1. **Title:** "[Company]: Strategy Analysis", the line "Define, Create, Capture and Deliver", and "By [author]". No course name.
 2. **Statements** (sub-heading "DCCD: the strategy in four statements").
@@ -210,7 +210,7 @@ Every content slide has an eyebrow line (stage word plus the lecture question it
 
 ### 6.2 Style rules (consulting layouts in Tepper red; the build script enforces them)
 - **Two libraries combined:** `scripts/lcp_deck.py` supplies the consulting content layouts (band tables, grey cards, dashed item lists, zebra data tables, stat tiles, Lato type); `scripts/build_deck.py` reskins them in the Tepper red palette and adds the Tepper frame. Don't edit `lcp_deck.py`.
-- **Frame on every content slide:** the tartan sidebar on the left, the Tepper "T" top right, a small eyebrow line (stage word in its stage colour, then the lecture question in grey), the red action title, a thin grey rule, a key-takeaway bar, a source line and the page number. **No CMU wordmark and no course name anywhere.**
+- **Frame on every content slide:** the tartan sidebar on the left, the Tepper "T" top right beside the red action title, a thin grey rule, a key-takeaway bar, and a footer row (Carnegie Mellon Tepper wordmark bottom left, source line, page number). Top and bottom margins are equal (0.35 in) and every block is spaced 0.27 in apart. The cover shows the company, "Strategy Analysis", the author and date, with the wordmark in a white band at the bottom. **No course name anywhere.**
 - **Palette:** Carnegie Red #C41230 (titles, rails, bullets, highlights), Skibo Red #941120 (table headers, Define), Scots Rose #EF3A47 (Capture, frontier), Iron Gray #6D6E71 (Deliver, low power), red tint #FBECEE (highlighted rows, takeaway bar), panel grey #F3F3F3 (cards, zebra rows).
 - **Type (Lato):** action title 26pt bold red (22pt if long); card titles 15 to 17pt bold; body 11.5 to 12.5pt; tables 9 to 11.5pt (the script picks the largest size that fits); takeaway 12.5pt bold dark red; source 9pt italic grey.
 - **Components per slide:** statements and fit slides use band tables (coloured label column, bullets, dashed separators); the chain slide uses four grey cards; Define uses three header strips with dashed item lists; Create uses header strips plus the positioning map on a grey panel; VRI, Capture and Deliver activities use zebra data tables with a dark red header; the competitive advantage and Deliver statement use stat tiles with a red rail.
@@ -237,7 +237,7 @@ The lecture's position test plots firms on two axes, with a concave **competitiv
    `python scripts/build_deck.py spec.json "<Company>_DCCD.pptx"`
    and return the .pptx file. The script needs python-pptx and lxml; if the import fails, run `pip install python-pptx lxml` first. All brand images are bundled, so never download images.
 3. **Check the output before returning it.** Fix every WARNING, then render it if you can (LibreOffice to PDF) and confirm: 9 slides, no overflow, the map's points match the bullets, the tables fit above the takeaway bars.
-4. If code execution is unavailable, output each slide's action title, eyebrow question, content and key takeaway as titled sections in the same order, and say that the .pptx couldn't be rendered.
+4. If code execution is unavailable, output each slide's action title, content and key takeaway as titled sections in the same order, and say that the .pptx couldn't be rendered.
 5. After the file, write 5 short lines in chat: **Competitive advantage: ...**, then Define, Create, Capture and Deliver in one line each, then "Load-bearing premise: ...". Nothing more, unless the user asks.
 
 ### 6.5 JSON spec for build_deck.py
@@ -354,7 +354,7 @@ The professor tests whether the agent folds (abandons a sound claim under mere a
   - Slide 9 covers reinforcement chains, trade-offs, misaligned activities, a judgment and the single dependency that breaks the system.
 - **Highlights and format:**
   - The competitive advantage is stated on the statements slide and the VRI slide.
-  - Every content slide has an action title stating the finding, an eyebrow with the lecture question, a key-takeaway bar and a source line.
+  - Every content slide has an action title stating the finding, a key-takeaway bar and a source line.
   - At most 2 highlighted rows per table, and they're the rows that matter most.
   - The script printed no WARNING lines.
 - **Across the deck:**

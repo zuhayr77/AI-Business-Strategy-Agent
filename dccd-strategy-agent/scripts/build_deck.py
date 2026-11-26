@@ -61,28 +61,18 @@ slide_w, slide_h = 13.333, 7.5
 sidebar_w = 0.70
 left, right = 1.05, 12.40
 width = right - left
-margin = 0.35            # top of the eyebrow line = bottom of the source line, from the slide edge
+margin = 0.35            # top of the title = bottom of the wordmark, from the slide edge
 gap = 0.27               # one vertical and horizontal rhythm for every block
-rule_y = 1.18
-body_top = rule_y + gap                       # 1.45
-source_h = 0.22
-source_y = slide_h - margin - source_h        # 6.93
+title_y, title_h = margin, 0.55
+rule_y = title_y + title_h + 0.10             # 1.00
+body_top = rule_y + gap                       # 1.27
+mark_w, mark_h = 2.52, 0.46                   # CMU Tepper wordmark, bottom left
+foot_y = slide_h - margin - mark_h            # 6.69, footer row: wordmark, source, page number
+source_x = left + mark_w + 0.30
 takeaway_h = 0.50
-takeaway_y = source_y - gap - takeaway_h      # 6.16
-body_bottom = takeaway_y - gap                # 5.89
+takeaway_y = foot_y - gap - takeaway_h        # 5.92
+body_bottom = takeaway_y - gap                # 5.65
 
-questions = {
-    "statements": ("DCCD", "The strategy in four statements"),
-    "chain": ("DCCD CHAIN", "Each stage feeds the next"),
-    "define": ("DEFINE", "Who is the customer, what is the offer, and what problem does it solve?"),
-    "create": ("CREATE", "Why will customers pay more than it costs us?"),
-    "vri": ("CREATE", "Are the resources behind the position valuable, rare and costly to imitate?"),
-    "capture": ("CAPTURE", "How much of the value stays with the firm? Industry forces, then firm power"),
-    "activities": ("DELIVER", "Which activities must the firm do well?"),
-    "fit": ("DELIVER", "Do the activities fit and reinforce each other?"),
-}
-eyebrow_fill = {"DCCD": red, "DCCD CHAIN": red, "DEFINE": stage_fill["define"], "CREATE": stage_fill["create"],
-                "CAPTURE": stage_fill["capture"], "DELIVER": stage_fill["deliver"]}
 default_titles = {
     "statements": "{c}'s Strategy in Four Statements",
     "chain": "Each Stage of {c}'s Strategy Feeds the Next",
@@ -108,35 +98,34 @@ class StrategyDeck(lc.Deck):
         super().__init__()
         self.warnings = []
 
-    def cover(self, company, subtitle, by):
+    def cover(self, company, by):
         s = self._new("cover")
         lc.gradient_rect(s, 0, 0, slide_w, slide_h, deep, darkest)
         s.shapes.add_picture(os.path.join(brand_dir, "tartan-strip.png"), 0, 0, Inches(sidebar_w), Inches(slide_h))
-        lc.text(s, 1.35, 1.55, 10.5, 1.0, company.upper(), 40, white, bold=True, anchor="b", line=1.0)
-        lc.text(s, 1.35, 2.70, 10.5, 0.5, "STRATEGY ANALYSIS", 16, blush, bold=True, line=1.0)
-        lc.text(s, 1.35, 3.25, 10.5, 0.5, subtitle, 20, rose, line=1.0)
-        lc.text(s, 1.35, 4.10, 10.5, 0.4, by, 14, white, line=1.0)
-        lc.text(s, 1.35, 4.50, 10.5, 0.4, datetime.date.today().strftime("%B %Y"), 12, blush, line=1.0)
-        lc.hline(s, 1.35, 5.05, 4.2, rose, 2.0)
-        lc.rect(s, sidebar_w, 6.15, slide_w - sidebar_w, slide_h - 6.15, fill=white)
-        lc.picture_fit(s, os.path.join(brand_dir, "tepper-T.png"), 1.35, 6.38, 0.85, 0.85, align="l")
+        lc.text(s, 1.35, 1.65, 10.5, 1.0, company.upper(), 40, white, bold=True, anchor="b", line=1.0)
+        lc.text(s, 1.35, 2.80, 10.5, 0.5, "STRATEGY ANALYSIS", 16, blush, bold=True, line=1.0)
+        lc.text(s, 1.35, 3.55, 10.5, 0.4, by, 14, white, line=1.0)
+        lc.text(s, 1.35, 3.95, 10.5, 0.4, datetime.date.today().strftime("%B %Y"), 12, blush, line=1.0)
+        lc.hline(s, 1.35, 4.55, 4.2, rose, 2.0)
+        band_y = 6.40
+        lc.rect(s, sidebar_w, band_y, slide_w - sidebar_w, slide_h - band_y, fill=white)
+        lc.picture_fit(s, os.path.join(brand_dir, "cmu-wordmark.png"), 1.35, band_y + (slide_h - band_y - 0.55) / 2,
+                       3.2, 0.55, align="l")
         self.meta[s.slide_id]["n_furniture"] = len(s.shapes)
         return s
 
     def page(self, key, title, src):
         s = self._new("page", title=title)
         s.shapes.add_picture(os.path.join(brand_dir, "tartan-strip.png"), 0, 0, Inches(sidebar_w), Inches(slide_h))
-        lc.picture_fit(s, os.path.join(brand_dir, "tepper-T.png"), 12.48, margin, 0.60, 0.60, align="r")
-        stage, question = questions[key]
-        eb = lc.text(s, left, margin, width - 0.6, 0.24, f"**{stage}**   {question}", 10.5, gray, line=1.0)
-        eb.text_frame.paragraphs[0].runs[0].font.color.rgb = eyebrow_fill[stage]
-        size = 26 if lc._text_w(title, 26, True) <= width - 0.4 else 22
-        lc.text(s, left, 0.62, width - 0.4, 0.46, title, size, red, bold=True, anchor="m", line=1.0, wrap=False)
+        lc.picture_fit(s, os.path.join(brand_dir, "tepper-T.png"), right - title_h, title_y, title_h, title_h, align="r")
+        size = 26 if lc._text_w(title, 26, True) <= width - 0.8 else 22
+        lc.text(s, left, title_y, width - 0.8, title_h, title, size, red, bold=True, anchor="m", line=1.0, wrap=False)
         lc.hline(s, left, rule_y, right, lc.rule, 0.75)
-        lc.text(s, left, source_y, width - 1.0, source_h, src, 9, gray, italic=True, anchor="b", line=1.0)
-        lc.text(s, right - 0.6, source_y, 0.6, source_h, str(len(self.prs.slides)), 9, gray, align="r", anchor="b",
+        lc.picture_fit(s, os.path.join(brand_dir, "cmu-wordmark.png"), left, foot_y, mark_w, mark_h, align="l")
+        lc.text(s, source_x, foot_y, right - 0.7 - source_x, mark_h, src, 9, gray, italic=True, anchor="m", line=1.0)
+        lc.text(s, right - 0.6, foot_y, 0.6, mark_h, str(len(self.prs.slides)), 10, gray, align="r", anchor="m",
                 line=1.0)
-        if lc._text_w(title, 22, True) > width - 0.4:
+        if lc._text_w(title, 22, True) > width - 0.8:
             self.warnings.append(f"slide {len(self.prs.slides)}: title too long: '{title}'")
         self.meta[s.slide_id]["n_furniture"] = len(s.shapes)
         return s
@@ -164,9 +153,9 @@ def card(s, x, y, w, h, title, color, items, size=12):
     """Grey card with a coloured top rule, stage-coloured title and square bullets."""
     lc.rect(s, x, y, w, h, fill=panel)
     lc.rect(s, x, y, w, 0.06, fill=color)
-    lc.text(s, x + 0.22, y + 0.18, w - 0.44, 0.38, title, 17, color, bold=True, line=1.0)
-    lc.hline(s, x + 0.22, y + 0.62, x + w - 0.22, lc.rule, 0.75, "dash")
-    lc.bullets(s, x + 0.22, y + 0.76, w - 0.44, h - 0.90, items, size=size, gap=6)
+    lc.text(s, x + 0.22, y + 0.14, w - 0.44, 0.34, title, 16, color, bold=True, line=1.0)
+    lc.hline(s, x + 0.22, y + 0.52, x + w - 0.22, lc.rule, 0.75, "dash")
+    lc.bullets(s, x + 0.22, y + 0.64, w - 0.44, h - 0.76, items, size=size, gap=5)
 
 
 def table_height(gf):
@@ -241,7 +230,7 @@ def chain_slide(d, spec, src):
     for i, key in enumerate(("define", "create", "capture", "deliver")):
         x = left + (i % 2) * (cw + gap)
         y = body_top + (i // 2) * (ch_h + gap)
-        card(s, x, y, cw, ch_h, key.capitalize(), stage_fill[key], ch[key], size=11.5)
+        card(s, x, y, cw, ch_h, key.capitalize(), stage_fill[key], ch[key], size=11)
     takeaway(s, spec.get("chain_takeaway") or spec["one_line"])
 
 
@@ -361,7 +350,7 @@ def capture_slide(d, spec, src):
 def activities_slide(d, spec, src):
     dv = spec["deliver"]
     s = d.page("activities", spec["titles"]["activities"], src)
-    tile(s, left, body_top, width, 0.95, "Deliver statement", dv["statement"], size=11.5)
+    tile(s, left, body_top, width, 0.90, "Deliver statement", dv["statement"], size=11.5)
     data = [["Key activity", "Delivers Define (who it serves)", "Reinforces Create (WTP or cost)",
              "Reinforces Capture (force it defends)"]]
     hl = []
@@ -369,7 +358,7 @@ def activities_slide(d, spec, src):
         data.append([a["activity"], a["define_link"], a["create_link"], a["capture_link"]])
         if a.get("highlight"):
             hl.append(i)
-    fitted_table(s, body_top + 0.95 + gap, data, [2.75, 2.85, 2.85, 2.9], body_bottom, hl, row_h=0.56)
+    fitted_table(s, body_top + 0.90 + gap, data, [2.75, 2.85, 2.85, 2.9], body_bottom, hl, row_h=0.46)
     takeaway(s, first(dv["activities_takeaway"]))
 
 
@@ -399,7 +388,7 @@ def check(d):
             l, t, w, h = lc._box(sh)
             if l + w > right + 0.03 or l < left - 0.03:
                 problems.append(f"slide {idx}: '{sh.name}' leaves the content column")
-            if t + h > source_y - 0.05 and t < source_y:
+            if t + h > foot_y - 0.05 and t < foot_y:
                 problems.append(f"slide {idx}: '{sh.name}' ends at {t + h:.2f}, into the source line")
             if sh.has_table:
                 bottom = t + table_height(sh)
@@ -425,7 +414,7 @@ def build(spec_path, out_path):
     spec["titles"] = titles
     src = "Source: " + spec.get("source", "company filings and reputable press; figures marked est. are estimates")
     d = StrategyDeck()
-    d.cover(c, "Define, Create, Capture and Deliver", f"By {spec['author']}" if spec.get("author") else "")
+    d.cover(c, f"By {spec['author']}" if spec.get("author") else "")
     statements_slide(d, spec, src)
     chain_slide(d, spec, src)
     define_slide(d, spec, src)
