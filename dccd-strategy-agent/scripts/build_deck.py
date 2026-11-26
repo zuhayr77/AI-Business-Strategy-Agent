@@ -364,8 +364,11 @@ def title_slide(prs, spec):
             for r in p.runs:
                 if r.text.strip().startswith("Company X"):
                     r.text = f"{spec['company']}:"
-                if r.text.strip().startswith("Group:") and spec.get("group"):
-                    r.text = f"Group: {spec['group']}"
+                if r.text.strip().startswith("Group:"):
+                    if spec.get("author"):
+                        r.text = f"By: {spec['author']}"
+                    elif spec.get("group"):
+                        r.text = f"Group: {spec['group']}"
 
 
 def statements_slide(prs, spec):

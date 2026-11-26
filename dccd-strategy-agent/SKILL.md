@@ -276,7 +276,7 @@ The lecture's position test plots firms on two axes, with a concave **competitiv
 ```json
 {
   "company": "Name",
-  "group": "9 is Fine!",
+  "author": "Zuhayr Rahman Chowdhury",
   "competitive_advantage": "One sentence: the source of advantage and why rivals cannot copy it",
   "statements": {"define": "...", "create": "...", "capture": "...", "deliver": "..."},
   "one_line": "Firm wins by ... ; the premise to watch is ...",

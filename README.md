@@ -64,9 +64,9 @@ cd dccd-strategy-agent
 python scripts/build_deck.py examples/duolingo_spec.json Duolingo_DCCD.pptx assets/template.pptx
 ```
 
-## Team
+## Author
 
-Developed by group "9 is Fine!" (Zuhayr Rahman Chowdhury and teammates), Tepper MSBA, Fall 2026.
+Zuhayr Rahman Chowdhury, Tepper MSBA, Fall 2026.
 
 ## License
 
