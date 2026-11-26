@@ -153,7 +153,7 @@
   "statement": "Limited SKUs, membership, Kirkland, no-frills warehouses and well-paid staff form one low-cost system that serves bulk buyers, keeps prices lowest, and locks in members; it refuses wide selection and high markups.",
   "activities_takeaway": "Membership and limited SKUs carry the strategy; Kirkland and staff reinforce them.",
   "reinforcement": [
-   "Low markups \u2192 more members and renewals \u2192 fee income \u2192 keeps markups low \u2192 more volume per SKU \u2192 better supplier terms"
+   "Low markups → more members and renewals → fee income → keeps markups low → more volume per SKU → better supplier terms"
   ],
   "misaligned": [
    "Growing online membership sign-ups renew at lower rates, weakening the renewal engine"
@@ -221,5 +221,16 @@
    "**Activities:** limited SKUs, membership, Kirkland, no-frills warehouses, paid staff",
    "**Fit:** low markups bring members, fees fund low markups"
   ]
- }
+ },
+ "titles": {
+  "statements": "Costco Trades Retail Margin for Member Loyalty",
+  "chain": "Membership Fees Link Every Stage of Costco's Strategy",
+  "define": "Bulk Buyers Pay a Fee for Trusted Goods at the Lowest Price",
+  "create": "Costco Wins on Cost: 11% Gross Margin vs Walmart's 24%",
+  "vri": "The Fee-Plus-Few-SKUs System Is What Rivals Can't Copy",
+  "capture": "Fees, Not Merchandise Margin, Are Where Costco Keeps Value",
+  "activities": "Membership and Limited SKUs Carry the Strategy",
+  "fit": "The System Depends on Renewal Staying Above 90%"
+ },
+ "source": "Costco FY2025 10-K and earnings releases; figures marked est. are estimates"
 }

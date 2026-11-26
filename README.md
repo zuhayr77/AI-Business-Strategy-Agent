@@ -4,7 +4,7 @@ A Claude Skill that turns one question, **"Give me [company]'s strategy"**, into
 
 The agent researches the company from public filings and news, then runs the **Define, Create, Capture, Deliver (DCCD)** framework in order, so each stage feeds the next. A Python pipeline renders the result as a 9-slide PowerPoint deck. The agent also answers follow-up questions concisely and defends its conclusions when challenged.
 
-Built for 46-882 Business Strategy Fundamentals (Carnegie Mellon, Tepper School of Business, MSBA), where it was tested live on an unseen company.
+Built at Carnegie Mellon's Tepper School of Business (MSBA), where it was tested live on an unseen company.
 
 ![DCCD statements slide](docs/statements.png)
 
@@ -35,7 +35,7 @@ Built for 46-882 Business Strategy Fundamentals (Carnegie Mellon, Tepper School 
 1. **Research:** the agent pulls the 8 to 15 facts the argument rests on (10-K, earnings, investor materials), each with a source. It never invents a number.
 2. **Reason:** it runs Define, Create, Capture and Deliver in order, then checks they are consistent (for example, that Deliver defends against the strongest force named in Capture).
 3. **Spec:** it writes the analysis into a JSON spec ([schema in SKILL.md](dccd-strategy-agent/SKILL.md)).
-4. **Render:** `build_deck.py` turns the spec into the deck: a fixed type scale, a positioning map with a concave competitive frontier, styled tables, highlighted key rows, and overflow warnings if any text would not fit.
+4. **Render:** `build_deck.py` turns the spec into a deck in the Carnegie Mellon (Tepper) design system: action titles that state each finding, summary bars, a positioning map with a concave competitive frontier, native editable tables with highlighted key rows, and a lint check that warns if any text would not fit.
 
 Besides decks, the skill has four other modes: a single DCCD statement, CEO-style Q&A, defending a claim under pushback, and explaining its own design choices.
 
@@ -45,7 +45,8 @@ Besides decks, the skill has four other modes: a single DCCD statement, CEO-styl
 dccd-strategy-agent/          the Claude Skill
   SKILL.md                    instructions: modes, research protocol, DCCD logic, deck rules
   scripts/build_deck.py       JSON spec -> .pptx deck
-  assets/template.pptx        slide master
+  scripts/tepper_deck.py      design-system library (native shapes, tables, lint)
+  assets/brand/               tartan strip, Tepper T, title background
   examples/                   specs and finished decks: Nike, Capital One, Costco, Tesla, Duolingo
 docs/                         slide previews
 ```
@@ -61,7 +62,7 @@ docs/                         slide previews
 ```bash
 pip install -r requirements.txt
 cd dccd-strategy-agent
-python scripts/build_deck.py examples/duolingo_spec.json Duolingo_DCCD.pptx assets/template.pptx
+python scripts/build_deck.py examples/duolingo_spec.json Duolingo_DCCD.pptx
 ```
 
 ## Author

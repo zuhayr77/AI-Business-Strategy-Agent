@@ -162,7 +162,7 @@
   "statement": "In-house software, integrated gigafactories, direct sales and Superchargers form one software-and-scale system that serves tech-forward buyers, cuts cost, and earns subscription revenue outside the price war; it refuses dealers and broad model ranges.",
   "activities_takeaway": "Software and gigafactories carry the strategy; direct sales and charging support them.",
   "reinforcement": [
-   "More cars \u2192 more fleet data \u2192 better FSD \u2192 more subscription revenue \u2192 funds scale and price cuts \u2192 more cars"
+   "More cars → more fleet data → better FSD → more subscription revenue → funds scale and price cuts → more cars"
   ],
   "misaligned": [
    "An aging, narrow model lineup works against volume while BYD launches cheaper models",
@@ -230,5 +230,16 @@
    "**Activities:** software and FSD, gigafactories, direct sales, Superchargers",
    "**Fit:** more cars bring more data, funding scale and price cuts"
   ]
- }
+ },
+ "titles": {
+  "statements": "Tesla Is Becoming a Low-Cost Producer Plus Software Platform",
+  "chain": "Scale and Software Link Every Stage of Tesla's Strategy",
+  "define": "Tech-Forward Buyers Hire Tesla for a Car That Improves",
+  "create": "Tesla Wins on Cost vs Legacy Makers, Not vs BYD",
+  "vri": "The Software Loop Is the Only Edge That Could Last",
+  "capture": "Price Wars Give Rivals and Buyers Most of the Value",
+  "activities": "Software and Gigafactories Carry the Strategy",
+  "fit": "The System Depends on Autonomy Arriving in Time"
+ },
+ "source": "Tesla 2025 10-K and delivery reports; BYD sales filings; figures marked est. are estimates"
 }

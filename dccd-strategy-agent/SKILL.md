@@ -177,106 +177,93 @@ In Statement mode, output only the requested statement, then one line: "Weakest 
 ## 6. Deck mode: the output deck
 
 ### 6.1 Slide list (fixed order; 8 slides, plus the title)
-1. **Title:** "[Company]: Define, Create, Capture & Deliver Statements" (the template's title slide).
-2. **DCCD: [Company]'s strategy in four statements.**
-   - The four statements from Section 5, each under a square bullet.
-   - Then, after one blank line, two red takeaways:
-     - **Competitive advantage:** the source and why rivals can't copy it.
-     - **Key takeaway:** the one-line strategy plus the load-bearing premise.
-3. **The DCCD Chain: Each Stage Feeds the Next.** The lecture's 2×2 grid (slide 3 of the Strategy Agent lecture), filled for this firm, so it reads as the bridge from the statements to the detail slides:
-   - **Define** (orange header): **Who**, **What**, **Problem solved**.
-   - **Create** (yellow): **WTP vs. cost**, **Positioning map**, **VRI**.
-   - **Capture** (red): **Six forces** (the strongest ones), **Power** (relative to competitors).
-   - **Deliver** (blue): **Activities**, **Fit** (how they reinforce each other).
-   - One bold-label bullet per item, each about 12 to 15 words. It must say the same thing as the statements slide, in the lecture's labels.
-4. **Define: who, what, and the problem solved.**
-   - The three lecture questions as square bullets, each answered by 1 or 2 round bullets.
-   - A red key takeaway naming the weakest premise.
-5. **Create: why will customers pay more than it costs us?**
-   - **Left:** "Willingness to pay vs. cost" with 4 round bullets: **Moves WTP**, **Table stakes**, **Cost levers** and **Wedge**. Then "Competitive positioning map" with 3 bullets: what the axes are, why a customer picks the firm over each rival, and what the frontier shows.
-   - **Right:** the positioning map graph.
-   - **Below the left column:** a red key takeaway (the direction of the wedge, in one sentence).
-6. **Create: can the resources behind the position hold it?**
-   - A VRI table with columns Resource / capability, Type, V, R, I, Verdict, ranked by strategic importance, 2 to 4 rows. Highlight the 1 or 2 rows that carry the competitive advantage.
-   - Red takeaways: **Competitive advantage** (restated) and one **Key takeaway** with the verdict and its clock.
-   - The grey line "O (organized to exploit?) is saved for Deliver."
-7. **Capture: how much of the value stays with the firm?**
-   - One six-forces table with columns Force, Power level, "What drives it, and what it does to margin", and "Does the firm have power over it, relative to competitors?"
-   - **Buyers and suppliers are always the first two rows,** and they carry the complete logic the lecture asks for: who they are, what drives their power, how the other forces (rivals, substitutes, entrants, complements) raise or lower that power, and what it does to margin.
-   - Highlight the 1 or 2 rows for the strongest force(s).
-   - A red key takeaway naming the strongest force and where the firm pushes back.
-8. **Deliver: which activities must the firm do well?** Deliver *is* the O in VRIO, so there's no separate O column: the whole section shows whether the firm is organized to execute.
-   - **Deliver statement** (square bullet, then one round bullet): the 3 to 5 key activities, how they form one system, what each D, C and C element they serve, and what the firm refuses to do.
-   - A table with columns Key activity, "Delivers Define (who / what it serves)", "Reinforces Create (WTP or cost)", "Reinforces Capture (force it defends against)", with 3 to 5 rows. Every cell names the specific Define customer, Create wedge or Capture force from earlier slides; never a generic phrase.
-   - Highlight the 1 or 2 activities that carry the competitive advantage.
-   - A red key takeaway: which activities carry the strategy.
-9. **Deliver: do the activities fit and reinforce each other?** (the Gucci template)
-   - **Choices that reinforce each other:** 1 or 2 chains (A → B → C → back to A) showing how each activity makes the others more valuable.
+Every content slide has a red **action title that states the finding** (not a topic), an italic grey sub-heading with the lecture question it answers, a body, a **summary bar** that closes the slide, and a source line.
+
+1. **Title:** "[Company]: Strategy Analysis", the line "Define, Create, Capture and Deliver", and "By [author]". No course name.
+2. **Statements** (sub-heading "DCCD: the strategy in four statements").
+   - Four rows, each a coloured stage chip (Define red, Create rose, Capture skibo, Deliver iron) beside the statement from Section 5.
+   - A tinted panel with a red rail: **Competitive advantage:** the source and why rivals can't copy it.
+   - Summary bar: the one-line strategy plus the premise to watch.
+3. **DCCD chain** (lecture slide 3, filled for the firm). Four stage cards in a 2×2 grid:
+   - **Define:** **Who**, **What**, **Problem solved**.
+   - **Create:** **WTP vs. cost**, **Positioning map**, **VRI**.
+   - **Capture:** **Six forces** (the strongest ones), **Power** (relative to competitors).
+   - **Deliver:** **Activities**, **Fit**.
+   - One bold-label bullet per item, 12 to 15 words, saying the same thing as the statements slide.
+4. **Define:** three cards, "Who is the customer?", "What is the offer?", "What problem does it solve?", each with 1 or 2 bullets. Summary bar: the weakest premise.
+5. **Create (position):** left, "Willingness to pay vs. cost" (**Moves WTP**, **Table stakes**, **Cost levers**, **Wedge**) and "Competitive positioning map" (axes, why customers pick the firm, what the frontier shows); right, the positioning map. Summary bar: the direction of the wedge.
+6. **Create (VRI):** a table with columns Resource / capability, Type, Valuable?, Rare?, Costly to imitate?, Verdict; 2 to 4 rows ranked by importance, the 1 or 2 rows that carry the advantage highlighted. Then the competitive advantage panel. Summary bar: the verdict and its clock.
+7. **Capture:** one six-forces table with columns Force, Power, "What drives it, and what it does to margin", "Does the firm push back, vs. rivals?".
+   - **Buyers and suppliers are always the first two rows** and carry the complete logic: who they are, what drives their power, how the other forces raise or lower it, and what it does to margin.
+   - High power is shown in red; the 1 or 2 strongest forces are highlighted.
+   - Summary bar: the strongest force and where the firm pushes back.
+8. **Deliver (activities):** Deliver is the O in VRIO, so there's no separate O column.
+   - A tinted panel with the **Deliver statement**: the 3 to 5 key activities, how they form one system, what they serve, what the firm refuses.
+   - A table with columns Key activity, "Delivers Define (who it serves)", "Reinforces Create (WTP or cost)", "Reinforces Capture (force it defends)", 3 to 5 rows. Every cell names the specific customer, wedge or force from earlier slides. Highlight the 1 or 2 activities that carry the advantage.
+   - Summary bar: which activities carry the strategy.
+9. **Deliver (fit),** the Gucci template, as four cards:
+   - **Choices that reinforce each other:** 1 or 2 chains (A → B → C → back to A).
    - **What the firm chooses not to do:** 2 or 3 trade-offs, each with what it gives up.
-   - **Activities that work against the position:** 1 or 2 misaligned activities (operational effectiveness, Deliver contradicting Create, or ignoring the strongest force).
+   - **Activities that work against the position:** 1 or 2 misaligned activities.
    - **Judgment: organized to execute?** Yes, Partly or No, and why, with a number where possible.
-   - A red key takeaway: the single dependency that would break the system (like Gucci's reliance on one designer).
+   - Summary bar: the single dependency that would break the system.
 
-### 6.2 Style rules (identical to the lecture deck; the build script enforces them)
-- **Background and logo:** Calibri throughout, a white background, and the Tepper "T" top right (from the template).
-- **The same text type has the same size on every slide.** The scale is fixed:
+### 6.2 Style rules (Carnegie Mellon / Tepper design system; the build script enforces them)
+- **Library:** `scripts/tepper_deck.py` draws everything as native, editable PowerPoint shapes and tables. Don't edit it; `build_deck.py` extends it.
+- **Brand:** Open Sans everywhere; tartan sidebar on the left; the Tepper "T" top right; Carnegie Red (#C41230) leads, then Scots Rose (#EF3A47), Skibo Red (#941120) and Iron Gray (#6D6E71). **No CMU wordmark and no course name on any slide.** Brand images are in `assets/brand/`.
+- **Type scale:**
 
-  | Text type | Size and style |
+  | Element | Size and style |
   |---|---|
-  | Titles | 28pt bold: a red (#C00000) stage word plus colon, then black text |
-  | Question / section bullets | 20pt bold, square bullet (Wingdings "q") |
-  | Answer bullets (and DCCD chain bullets) | 16pt regular, round bullet "•" |
-  | Key takeaways (incl. Competitive advantage) | 16pt red bold italic, square bullet, as in the lecture's Sousa slide; no boxes |
-  | Table header | 12pt bold, white on dark red (#AF2317) |
-  | Table body | 10 to 13pt; only tables vary, to fit their content |
-  | DCCD chain headers | 16pt bold, centered, on the lecture colors |
+  | Action title | 24pt bold Carnegie Red (21pt if 57 to 66 characters) |
+  | Sub-heading (lecture question) | 12pt italic grey |
+  | Card headers | 13pt bold white on the stage colour |
+  | Body and card bullets | 10.5 to 12.5pt; key phrase in **bold** |
+  | Tables | header bold white on red; body 9 to 11pt (the script picks the largest size that fits) |
+  | Summary bar | 12pt bold white, alternating red and grey |
+  | Source line | 9pt italic grey |
 
-- **Title case:** every slide title capitalizes each word except short connecting words (a, an, the, and, or, of, in, on, to, for, with), as in "Create: Why Will Customers Pay More Than It Costs Us?". The VRI header reads "VRI: Valuable, Rare, Costly to Imitate (Inimitable)?". The script applies this automatically.
-- **Spacing:**
-  - Line spacing is 115% everywhere.
-  - Each question bullet gets the same space before it (6pt), and each answer bullet the same (2pt).
-  - Each slide's takeaways sit one blank line below the content above them.
-- **Tables:** alternating white and light grey rows. Highlighted rows (at most 2 per table) get a light red fill, bold text and a red first column. Highlight only what the reader must remember: the competitive advantage, the strongest force, the key activities.
-- **Length limits,** so everything fits at the fixed sizes:
+- **Action titles:** a full sentence stating the finding, Title Case, no full stop, 56 characters ideal and 66 maximum. Quantify when possible ("Costco Wins on Cost: 11% Gross Margin vs Walmart's 24%").
+- **Highlights:** at most 2 highlighted rows per table (red tint, bold, red first column): the competitive advantage, the strongest forces, the key activities.
+- **Length limits,** so everything fits:
   - statements: about 28 words each;
-  - competitive advantage and key takeaway: about 18 words each;
-  - DCCD chain bullets: 12 to 15 words;
-  - bullets: about 15 words on the Create map slide, about 18 elsewhere;
+  - competitive advantage and summary bars: under about 95 characters;
+  - chain bullets: 12 to 15 words; card bullets: about 18 words;
   - table cells: about 20 words; buyers and suppliers rows up to about 40 words.
-- **If the script prints a WARNING,** shorten the text it names and rebuild. Never shrink the fixed sizes.
-- **Writing:** short fragments, no paragraphs. Every bullet earns its place. No digressions, no generic filler ("in today's competitive landscape"), no em dashes.
+- **The script runs the library's lint check.** If it prints a WARNING, shorten the text it names and rebuild.
+- **Writing:** short fragments, no paragraphs, no filler, no em dashes or en dashes.
 
-### 6.3 The positioning map (Create, slide 4): how to draw it for any company
+### 6.3 The positioning map (Create, slide 5): how to draw it for any company
 The lecture's position test plots firms on two axes, with a concave **competitive frontier** (the best WTP achievable at each cost level with today's technology).
-- **Y axis:** "Increased WTP", with a sub-label naming the attribute customers actually choose on in this industry, for example "Freshness and customization", "Clinical accuracy" or "Design and status".
-- **X axis:** "Low cost", with a sub-label for how cost or price is measured, for example "(price per meal)" or "(cost per seat)". Moving right means lower cost.
-- **Firms:** the focal firm (red) plus 3 to 5 named competitors and, if relevant, the status-quo alternative. Each gets coordinates x, y on a 0 to 10 scale (x = 10 is the lowest cost, y = 10 the highest WTP).
-  - Firms **on** the frontier are efficient for their position: set `"frontier": true` and the script snaps them exactly onto the curve.
+- **Y axis:** "Higher willingness to pay", with a sub-label naming the attribute customers actually choose on in this industry, for example "Freshness and customization" or "Design and status".
+- **X axis:** "Lower cost", with a sub-label for how cost or price is measured, for example "(price per meal)". Moving right means lower cost.
+- **Firms:** the focal firm (red) plus 3 to 5 named competitors (grey) and, if relevant, the status-quo alternative. Each gets coordinates x, y on a 0 to 10 scale (x = 10 is the lowest cost, y = 10 the highest WTP).
+  - Firms **on** the frontier: set `"frontier": true` and the script snaps them onto the curve.
   - Firms **inside** it are "stuck in the middle": give them a lower y than the curve at their x.
   - No firm can sit beyond the frontier; the script pulls any such point back onto the curve.
-  - Put firms where the evidence (prices, margins, quality signals) puts them, and keep the coordinates consistent with the bullets beside the map.
-- **The map varies by company:** the axis sub-labels, the firms and their positions change. The lecture form (y = WTP, x = low cost, concave frontier) stays fixed.
-- The caption reads "Illustrative positions, not measured".
+  - Put firms where the evidence puts them, and keep the coordinates consistent with the bullets beside the map.
+- The source line notes that map positions are illustrative, not measured.
 
 ### 6.4 How to produce the deck
-1. Write the JSON spec in Section 6.5, filled from your fact sheet and argument.
-2. If code execution is available, run:
-   `python scripts/build_deck.py spec.json "<Company>_DCCD.pptx" assets/template.pptx`
-   and return the .pptx file. The script needs python-pptx and lxml; if the import fails, run `pip install python-pptx` first. Paths are relative to this skill's folder. `assets/template.pptx` already holds the Tepper logo and title artwork, so never download images.
-3. **Check the output before returning it.** Re-open the .pptx, or render it, and confirm:
-   - 9 slides;
-   - no text overflow;
-   - the map's points match the bullets;
-   - the table rows fit.
-   If any text overflows, shorten the bullets. Don't shrink below the script's minimums.
-4. If code execution is unavailable, output each slide's content as titled sections in the same order and wording, so it can be pasted into the template, and say that the .pptx couldn't be rendered.
+1. Write the JSON spec in Section 6.5, filled from your fact sheet and argument, including the eight action titles.
+2. If code execution is available, run (from this skill's folder):
+   `python scripts/build_deck.py spec.json "<Company>_DCCD.pptx"`
+   and return the .pptx file. The script needs python-pptx and lxml; if the import fails, run `pip install python-pptx lxml` first. All brand images are bundled, so never download images.
+3. **Check the output before returning it.** Fix every WARNING, then render it if you can (LibreOffice to PDF) and confirm: 9 slides, no overflow, the map's points match the bullets, the tables fit above the summary bars.
+4. If code execution is unavailable, output each slide's action title, sub-heading, content and summary bar as titled sections in the same order, and say that the .pptx couldn't be rendered.
 5. After the file, write 5 short lines in chat: **Competitive advantage: ...**, then Define, Create, Capture and Deliver in one line each, then "Load-bearing premise: ...". Nothing more, unless the user asks.
 
 ### 6.5 JSON spec for build_deck.py
 ```json
 {
   "company": "Name",
-  "author": "Zuhayr Rahman Chowdhury",
+  "author": "Name shown on the title slide",
+  "source": "Company FY2025 10-K; Q2 2026 earnings; figures marked est. are estimates",
+  "titles": {
+    "statements": "Action title stating the strategy",
+    "chain": "...", "define": "...", "create": "...", "vri": "...",
+    "capture": "...", "activities": "...", "fit": "..."
+  },
   "competitive_advantage": "One sentence: the source of advantage and why rivals cannot copy it",
   "statements": {"define": "...", "create": "...", "capture": "...", "deliver": "..."},
   "one_line": "Firm wins by ... ; the premise to watch is ...",
@@ -294,7 +281,7 @@ The lecture's position test plots firms on two axes, with a concave **competitiv
   },
   "create": {
     "wtp_vs_cost": ["**Moves WTP:** ...", "**Table stakes:** ...", "**Cost levers:** ...", "**Wedge:** ..."],
-    "map_reading": ["Axes are what customers choose on: ...", "Customers pick X over A because ...; over B because ...", "Frontier: ..."],
+    "map_reading": ["Axes: ...", "Customers pick X because ...", "Frontier: ..."],
     "takeaway": "...",
     "map": {"y_label": "attribute customers choose on", "x_label": "(how cost/price is measured)",
             "firms": [{"name": "Firm", "x": 6, "y": 7, "focal": true, "frontier": true}, {"name": "Rival", "x": 3, "y": 5}]},
@@ -307,9 +294,9 @@ The lecture's position test plots firms on two axes, with a concave **competitiv
   },
   "deliver": {
     "statement": "Deliver statement: activities, how they form one system, what they serve, what the firm refuses",
-    "activities": [{"activity": "...", "define_link": "the Define customer / job it serves", "create_link": "the Create wedge it builds", "capture_link": "the Capture force it defends against", "highlight": true}],
+    "activities": [{"activity": "...", "define_link": "...", "create_link": "...", "capture_link": "...", "highlight": true}],
     "activities_takeaway": "which activities carry the strategy",
-    "reinforcement": ["A → B → C → back to A", "optional second chain"],
+    "reinforcement": ["A → B → C → back to A"],
     "not_do": ["trade-off 1 (what it gives up)", "trade-off 2"],
     "misaligned": ["activity that works against the position, and why"],
     "judgment": ["Yes/Partly/No: organized to execute, because ..."],
@@ -317,7 +304,7 @@ The lecture's position test plots firms on two axes, with a concave **competitiv
   }
 }
 ```
-Every `takeaway` field takes a string or a list of up to 2 strings. Set `"highlight": true` on at most 2 rows per table. Keep each list item under about 25 words, each table cell under about 22 words, and each statement under about 60 words. Use exactly six forces rows, in this order: Buyers, Suppliers, Rivalry, New entrants, Substitutes, Complements. The Buyers and Suppliers `logic` cells carry the complete logic: drivers, how the other forces move their power, and the effect on margin.
+Every `takeaway` becomes that slide's summary bar. `titles` is optional (the script falls back to generic titles) but always write them: an action title that states the finding is the house style. Set `"highlight": true` on at most 2 rows per table. Use exactly six forces rows, in this order: Buyers, Suppliers, Rivalry, New entrants, Substitutes, Complements.
 
 ## 7. Interview mode: answer like the Co-AI CEO
 
@@ -380,9 +367,8 @@ The professor tests whether the agent folds (abandons a sound claim under mere a
   - Slide 9 covers reinforcement chains, trade-offs, misaligned activities, a judgment and the single dependency that breaks the system.
 - **Highlights and format:**
   - The competitive advantage is stated on the statements slide and the VRI slide.
-  - Every analysis slide ends, after a blank line, with at most 2 red takeaways.
+  - Every content slide has an action title stating the finding, a sub-heading with the lecture question, a summary bar and a source line.
   - At most 2 highlighted rows per table, and they're the rows that matter most.
-  - Every text type is the same size on every slide.
   - The script printed no WARNING lines.
 - **Across the deck:**
   - D, C and C are consistent, with no "D contradicts C".
@@ -400,16 +386,17 @@ The professor tests whether the agent folds (abandons a sound claim under mere a
 | One Capture table, with buyers and suppliers first and fuller | The lecture demands the complete logic for buyer and supplier power. Putting it in the first two rows keeps one slide per question, as in the lecture. | A separate slide if a tester wants more depth. |
 | A DCCD chain slide right after the statements | The lecture's slide 3 shows how each stage feeds the next; filled for the firm, it bridges the four statements and the detail slides. | |
 | Two Deliver slides, no O column | Deliver is the O. Slide 8 links each activity to Define, Create and Capture; slide 9 follows the Gucci template (reinforcement, trade-offs, misalignment, judgment, risk), which Assignment 4 graded. | |
-| Fixed type scale and length limits | The same text type at the same size on every slide reads as one deck; the length limits keep it fitting without shrinking text. | |
+| Carnegie Mellon (Tepper) design system | Action titles state each finding, so reading only the titles tells the whole strategy; native shapes and tables keep every number editable; lint checks catch overflow before the deck is returned. | |
 | Axes chosen per industry, frontier fixed | "Axes are what customers choose on", so attributes vary by industry, but the lecture's position-test form stays. | Calibrate positions with measured price and quality data. |
 | Research first, fact sheet, no invented numbers | Correctness: A1-A3 feedback penalized claims stronger than the evidence. | Automatic source footnotes. |
 | Pushback rules | The lecture asks us to fix where the agent "folds or digs in". | |
-| Red takeaways and highlighted rows | The reader sees the competitive advantage and the 1 or 2 points that matter on each slide without reading every cell; the red takeaway style matches the lecture's Sousa slide. | |
+| Summary bars and highlighted rows | The reader sees the competitive advantage and the 1 or 2 points that matter on each slide without reading every cell. | |
 | "Give me X's strategy" always returns a deck | It is the exact test question, and the lecture says the output is a deck. | |
 
 ## 11. Worked examples
 
-- `examples/nike_spec.json` and `examples/Nike_DCCD.pptx`: the current reference in the final format (chain slide, fixed sizes, title case). Match it exactly.
+- `examples/duolingo_spec.json` and `examples/Duolingo_DCCD.pptx`: the current reference in the final format. Match it.
+- `examples/nike_spec.json` and `examples/Nike_DCCD.pptx`: a consumer-brand example.
 - `examples/capital_one_spec.json` and `examples/Capital_One_DCCD.pptx`: the reference for the standard question "Give me Capital One's strategy", with highlights. Match this depth, length, tone and highlighting.
 - `examples/costco_spec.json` and `examples/Costco_DCCD.pptx`: a second complete example.
 - `examples/tesla_spec.json` and `examples/Tesla_DCCD.pptx`: a third, for an industry in a price war, with a strategy in transition.

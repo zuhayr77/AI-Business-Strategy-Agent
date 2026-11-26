@@ -61,12 +61,40 @@
    "y_label": "Learning results and engagement",
    "x_label": "(price to learner)",
    "firms": [
-    {"name": "Tutors (Preply)", "x": 1.0, "y": 9.0, "frontier": true},
-    {"name": "Rosetta Stone", "x": 2.6, "y": 4.6},
-    {"name": "Babbel", "x": 4.6, "y": 6.2},
-    {"name": "Speak (AI tutor)", "x": 5.6, "y": 8.0, "frontier": true},
-    {"name": "Duolingo", "x": 8.4, "y": 6.0, "focal": true, "frontier": true},
-    {"name": "ChatGPT (free)", "x": 9.6, "y": 2.4}
+    {
+     "name": "Tutors (Preply)",
+     "x": 1.0,
+     "y": 9.0,
+     "frontier": true
+    },
+    {
+     "name": "Rosetta Stone",
+     "x": 2.6,
+     "y": 4.6
+    },
+    {
+     "name": "Babbel",
+     "x": 4.6,
+     "y": 6.2
+    },
+    {
+     "name": "Speak (AI tutor)",
+     "x": 5.6,
+     "y": 8.0,
+     "frontier": true
+    },
+    {
+     "name": "Duolingo",
+     "x": 8.4,
+     "y": 6.0,
+     "focal": true,
+     "frontier": true
+    },
+    {
+     "name": "ChatGPT (free)",
+     "x": 9.6,
+     "y": 2.4
+    }
    ]
   },
   "vri": [
@@ -204,5 +232,16 @@
    "Mostly organized: product, data and marketing all serve engagement; 2026 put DAUs (+23%) ahead of bookings (+8%), with EBITDA margin down to 25.9% from 31.2%"
   ],
   "takeaway": "The system depends on one thing: the habit staying more fun than a free AI tutor."
- }
+ },
+ "titles": {
+  "statements": "Duolingo Wins by Making Learning a Free Daily Habit",
+  "chain": "Each Stage Builds on a Free, Habit-Forming App",
+  "define": "Casual Learners Hire Duolingo to Keep a Daily Habit",
+  "create": "Duolingo Wins on Cost: Free to Learners, 72% Gross Margin",
+  "vri": "The Habit Engine and Brand Hold; AI Content Is Parity",
+  "capture": "Free AI Tutors and Non-Payers Take the Most Value",
+  "activities": "The Habit Engine and AI Content Carry the Strategy",
+  "fit": "The System Works Only While the Habit Beats Free AI"
+ },
+ "source": "Duolingo FY2025 10-K; Q2 2026 shareholder letter; figures marked est. are estimates"
 }

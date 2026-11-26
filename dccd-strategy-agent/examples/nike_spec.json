@@ -217,7 +217,7 @@
   ],
   "activities_takeaway": "Athlete marketing and innovation carry the strategy; the other activities support them.",
   "reinforcement": [
-   "Athletes \u2192 brand heat \u2192 full-price sales \u2192 margin funds more athletes and innovation \u2192 more brand heat",
+   "Athletes → brand heat → full-price sales → margin funds more athletes and innovation → more brand heat",
    "Innovation gives retailers a reason to give Nike shelf space, which puts athletes' stories in front of more buyers"
   ],
   "not_do": [
@@ -232,5 +232,16 @@
    "Partly organized: the brand engine is intact, but innovation and channels drifted; Win Now is realigning them (Direct down to $17.7B, wholesale up)"
   ],
   "takeaway": "The system depends on one thing: innovation that keeps the brand hot with young consumers."
- }
+ },
+ "titles": {
+  "statements": "Nike Sells Brand Heat at Premium Prices",
+  "chain": "Brand Heat Links Every Stage of Nike's Strategy",
+  "define": "Young Sneaker Buyers Hire Nike to Perform and Belong",
+  "create": "Nike Wins on WTP: Brand Drives a 42.9% Gross Margin",
+  "vri": "The Brand and Jordan Are Sustained; Innovation Is Not",
+  "capture": "Rivals and Retailers Cap Prices; the Brand Pushes Back",
+  "activities": "Athlete Marketing and Innovation Carry the Strategy",
+  "fit": "The System Depends on Innovation Keeping Nike Hot"
+ },
+ "source": "Nike FY2026 10-K and earnings releases; figures marked est. are estimates"
 }

@@ -163,7 +163,7 @@
   "statement": "Test-and-learn underwriting, an owned network, cloud technology and a branch-light bank form one data engine that serves underserved borrowers, lowers the cost of risk and takes back the fees networks charge; it refuses big branches and investment banking.",
   "activities_takeaway": "Underwriting and the network carry the strategy; the rest feeds them data and cheap funding.",
   "reinforcement": [
-   "Card and network data \u2192 better underwriting \u2192 profitable accounts \u2192 cheap deposits and more network volume \u2192 more data"
+   "Card and network data → better underwriting → profitable accounts → cheap deposits and more network volume → more data"
   ],
   "misaligned": [
    "Discover's acceptance gaps abroad work against moving credit cards onto its own network",
@@ -195,7 +195,7 @@
     "define_link": "Digital-first customers wanting fast approvals"
    },
    {
-    "activity": "Branch-light digital bank (360, caf\u00e9s)",
+    "activity": "Branch-light digital bank (360, cafés)",
     "create_link": "Cheap deposits lower funding cost",
     "capture_link": "Reduces reliance on wholesale funding",
     "define_link": "Customers wanting fee-free digital banking"
@@ -231,5 +231,16 @@
    "**Activities:** test-and-learn, network ownership, cloud tech, branch-light bank",
    "**Fit:** more data, better pricing, cheaper deposits, more network volume"
   ]
- }
+ },
+ "titles": {
+  "statements": "Capital One Prices Risk Better and Owns the Rails",
+  "chain": "Data-Driven Underwriting Links Every Stage",
+  "define": "Capital One Serves Borrowers Big Banks Misprice",
+  "create": "Capital One Wins on Cost of Risk, Not a Price Premium",
+  "vri": "Underwriting Data and the Discover Network Are Sustained",
+  "capture": "Owning Discover Keeps the Network's Share of Value",
+  "activities": "Underwriting and the Network Carry the Strategy",
+  "fit": "The System Depends on Losses Staying Below Rivals'"
+ },
+ "source": "Capital One 2025 10-K and earnings releases; figures marked est. are estimates"
 }
