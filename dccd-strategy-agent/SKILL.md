@@ -183,30 +183,30 @@ Every content slide has an eyebrow line (stage word plus the lecture question it
 2. **Statements** (sub-heading "DCCD: the strategy in four statements").
    - Four rows, each a coloured stage chip (Define red, Create rose, Capture skibo, Deliver iron) beside the statement from Section 5.
    - A tinted panel with a red rail: **Competitive advantage:** the source and why rivals can't copy it.
-   - Summary bar: the one-line strategy plus the premise to watch.
+   - Key takeaway: the one-line strategy plus the premise to watch.
 3. **DCCD chain** (lecture slide 3, filled for the firm). Four stage cards in a 2×2 grid:
    - **Define:** **Who**, **What**, **Problem solved**.
    - **Create:** **WTP vs. cost**, **Positioning map**, **VRI**.
    - **Capture:** **Six forces** (the strongest ones), **Power** (relative to competitors).
    - **Deliver:** **Activities**, **Fit**.
    - One bold-label bullet per item, 12 to 15 words, saying the same thing as the statements slide.
-4. **Define:** three cards, "Who is the customer?", "What is the offer?", "What problem does it solve?", each with 1 or 2 bullets. Summary bar: the weakest premise.
-5. **Create (position):** left, "Willingness to pay vs. cost" (**Moves WTP**, **Table stakes**, **Cost levers**, **Wedge**) and "Competitive positioning map" (axes, why customers pick the firm, what the frontier shows); right, the positioning map. Summary bar: the direction of the wedge.
-6. **Create (VRI):** a table with columns Resource / capability, Type, Valuable?, Rare?, Costly to imitate?, Verdict; 2 to 4 rows ranked by importance, the 1 or 2 rows that carry the advantage highlighted. Then the competitive advantage panel. Summary bar: the verdict and its clock.
+4. **Define:** three cards, "Who is the customer?", "What is the offer?", "What problem does it solve?", each with 1 or 2 bullets. Key takeaway: the weakest premise.
+5. **Create (position):** left, "Willingness to pay vs. cost" (**Moves WTP**, **Table stakes**, **Cost levers**, **Wedge**) and "Competitive positioning map" (axes, why customers pick the firm, what the frontier shows); right, the positioning map. Key takeaway: the direction of the wedge.
+6. **Create (VRI):** a table with columns Resource / capability, Type, Valuable?, Rare?, Costly to imitate?, Verdict; 2 to 4 rows ranked by importance, the 1 or 2 rows that carry the advantage highlighted. Then the competitive advantage panel. Key takeaway: the verdict and its clock.
 7. **Capture:** one six-forces table with columns Force, Power, "What drives it, and what it does to margin", "Does the firm push back, vs. rivals?".
    - **Buyers and suppliers are always the first two rows** and carry the complete logic: who they are, what drives their power, how the other forces raise or lower it, and what it does to margin.
    - High power is shown in red; the 1 or 2 strongest forces are highlighted.
-   - Summary bar: the strongest force and where the firm pushes back.
+   - Key takeaway: the strongest force and where the firm pushes back.
 8. **Deliver (activities):** Deliver is the O in VRIO, so there's no separate O column.
    - A tinted panel with the **Deliver statement**: the 3 to 5 key activities, how they form one system, what they serve, what the firm refuses.
    - A table with columns Key activity, "Delivers Define (who it serves)", "Reinforces Create (WTP or cost)", "Reinforces Capture (force it defends)", 3 to 5 rows. Every cell names the specific customer, wedge or force from earlier slides. Highlight the 1 or 2 activities that carry the advantage.
-   - Summary bar: which activities carry the strategy.
+   - Key takeaway: which activities carry the strategy.
 9. **Deliver (fit),** the Gucci template, as four cards:
    - **Choices that reinforce each other:** 1 or 2 chains (A → B → C → back to A).
    - **What the firm chooses not to do:** 2 or 3 trade-offs, each with what it gives up.
    - **Activities that work against the position:** 1 or 2 misaligned activities.
    - **Judgment: organized to execute?** Yes, Partly or No, and why, with a number where possible.
-   - Summary bar: the single dependency that would break the system.
+   - Key takeaway: the single dependency that would break the system.
 
 ### 6.2 Style rules (consulting layouts in Tepper red; the build script enforces them)
 - **Two libraries combined:** `scripts/lcp_deck.py` supplies the consulting content layouts (band tables, grey cards, dashed item lists, zebra data tables, stat tiles, Lato type); `scripts/build_deck.py` reskins them in the Tepper red palette and adds the Tepper frame. Don't edit `lcp_deck.py`.
@@ -236,8 +236,8 @@ The lecture's position test plots firms on two axes, with a concave **competitiv
 2. If code execution is available, run (from this skill's folder):
    `python scripts/build_deck.py spec.json "<Company>_DCCD.pptx"`
    and return the .pptx file. The script needs python-pptx and lxml; if the import fails, run `pip install python-pptx lxml` first. All brand images are bundled, so never download images.
-3. **Check the output before returning it.** Fix every WARNING, then render it if you can (LibreOffice to PDF) and confirm: 9 slides, no overflow, the map's points match the bullets, the tables fit above the summary bars.
-4. If code execution is unavailable, output each slide's action title, sub-heading, content and summary bar as titled sections in the same order, and say that the .pptx couldn't be rendered.
+3. **Check the output before returning it.** Fix every WARNING, then render it if you can (LibreOffice to PDF) and confirm: 9 slides, no overflow, the map's points match the bullets, the tables fit above the takeaway bars.
+4. If code execution is unavailable, output each slide's action title, eyebrow question, content and key takeaway as titled sections in the same order, and say that the .pptx couldn't be rendered.
 5. After the file, write 5 short lines in chat: **Competitive advantage: ...**, then Define, Create, Capture and Deliver in one line each, then "Load-bearing premise: ...". Nothing more, unless the user asks.
 
 ### 6.5 JSON spec for build_deck.py
@@ -354,7 +354,7 @@ The professor tests whether the agent folds (abandons a sound claim under mere a
   - Slide 9 covers reinforcement chains, trade-offs, misaligned activities, a judgment and the single dependency that breaks the system.
 - **Highlights and format:**
   - The competitive advantage is stated on the statements slide and the VRI slide.
-  - Every content slide has an action title stating the finding, a sub-heading with the lecture question, a summary bar and a source line.
+  - Every content slide has an action title stating the finding, an eyebrow with the lecture question, a key-takeaway bar and a source line.
   - At most 2 highlighted rows per table, and they're the rows that matter most.
   - The script printed no WARNING lines.
 - **Across the deck:**
@@ -377,7 +377,7 @@ The professor tests whether the agent folds (abandons a sound claim under mere a
 | Axes chosen per industry, frontier fixed | "Axes are what customers choose on", so attributes vary by industry, but the lecture's position-test form stays. | Calibrate positions with measured price and quality data. |
 | Research first, fact sheet, no invented numbers | Correctness: A1-A3 feedback penalized claims stronger than the evidence. | Automatic source footnotes. |
 | Pushback rules | The lecture asks us to fix where the agent "folds or digs in". | |
-| Summary bars and highlighted rows | The reader sees the competitive advantage and the 1 or 2 points that matter on each slide without reading every cell. | |
+| Key-takeaway bars and highlighted rows | The reader sees the competitive advantage and the 1 or 2 points that matter on each slide without reading every cell. | |
 | "Give me X's strategy" always returns a deck | It is the exact test question, and the lecture says the output is a deck. | |
 
 ## 11. Worked examples
