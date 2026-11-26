@@ -177,7 +177,7 @@ In Statement mode, output only the requested statement, then one line: "Weakest 
 ## 6. Deck mode: the output deck
 
 ### 6.1 Slide list (fixed order; 8 slides, plus the title)
-Every content slide has a red **action title that states the finding** (not a topic), an italic grey sub-heading with the lecture question it answers, a body, a **summary bar** that closes the slide, and a source line.
+Every content slide has an eyebrow line (stage word plus the lecture question it answers), a red **action title that states the finding** (not a topic), a body, a **key-takeaway bar** that closes the slide, and a source line.
 
 1. **Title:** "[Company]: Strategy Analysis", the line "Define, Create, Capture and Deliver", and "By [author]". No course name.
 2. **Statements** (sub-heading "DCCD: the strategy in four statements").
@@ -208,30 +208,17 @@ Every content slide has a red **action title that states the finding** (not a to
    - **Judgment: organized to execute?** Yes, Partly or No, and why, with a number where possible.
    - Summary bar: the single dependency that would break the system.
 
-### 6.2 Style rules (Carnegie Mellon / Tepper design system; the build script enforces them)
-- **Library:** `scripts/tepper_deck.py` draws everything as native, editable PowerPoint shapes and tables. Don't edit it; `build_deck.py` extends it.
-- **Brand:** Open Sans everywhere; tartan sidebar on the left; the Tepper "T" top right; Carnegie Red (#C41230) leads, then Scots Rose (#EF3A47), Skibo Red (#941120) and Iron Gray (#6D6E71). **No CMU wordmark and no course name on any slide.** Brand images are in `assets/brand/`.
-- **Type scale:**
-
-  | Element | Size and style |
-  |---|---|
-  | Action title | 24pt bold Carnegie Red (21pt if 57 to 66 characters) |
-  | Sub-heading (lecture question) | 12pt italic grey |
-  | Card headers | 13pt bold white on the stage colour |
-  | Body and card bullets | 10.5 to 12.5pt; key phrase in **bold** |
-  | Tables | header bold white on red; body 9 to 11pt (the script picks the largest size that fits) |
-  | Summary bar | 12pt bold white, alternating red and grey |
-  | Source line | 9pt italic grey |
-
-- **Action titles:** a full sentence stating the finding, Title Case, no full stop, 56 characters ideal and 66 maximum. Quantify when possible ("Costco Wins on Cost: 11% Gross Margin vs Walmart's 24%").
-- **Highlights:** at most 2 highlighted rows per table (red tint, bold, red first column): the competitive advantage, the strongest forces, the key activities.
-- **Length limits,** so everything fits:
-  - statements: about 28 words each;
-  - competitive advantage and summary bars: under about 95 characters;
-  - chain bullets: 12 to 15 words; card bullets: about 18 words;
-  - table cells: about 20 words; buyers and suppliers rows up to about 40 words.
-- **The script runs the library's lint check.** If it prints a WARNING, shorten the text it names and rebuild.
-- **Writing:** short fragments, no paragraphs, no filler, no em dashes or en dashes.
+### 6.2 Style rules (consulting layouts in Tepper red; the build script enforces them)
+- **Two libraries combined:** `scripts/lcp_deck.py` supplies the consulting content layouts (band tables, grey cards, dashed item lists, zebra data tables, stat tiles, Lato type); `scripts/build_deck.py` reskins them in the Tepper red palette and adds the Tepper frame. Don't edit `lcp_deck.py`.
+- **Frame on every content slide:** the tartan sidebar on the left, the Tepper "T" top right, a small eyebrow line (stage word in its stage colour, then the lecture question in grey), the red action title, a thin grey rule, a key-takeaway bar, a source line and the page number. **No CMU wordmark and no course name anywhere.**
+- **Palette:** Carnegie Red #C41230 (titles, rails, bullets, highlights), Skibo Red #941120 (table headers, Define), Scots Rose #EF3A47 (Capture, frontier), Iron Gray #6D6E71 (Deliver, low power), red tint #FBECEE (highlighted rows, takeaway bar), panel grey #F3F3F3 (cards, zebra rows).
+- **Type (Lato):** action title 26pt bold red (22pt if long); card titles 15 to 17pt bold; body 11.5 to 12.5pt; tables 9 to 11.5pt (the script picks the largest size that fits); takeaway 12.5pt bold dark red; source 9pt italic grey.
+- **Components per slide:** statements and fit slides use band tables (coloured label column, bullets, dashed separators); the chain slide uses four grey cards; Define uses three header strips with dashed item lists; Create uses header strips plus the positioning map on a grey panel; VRI, Capture and Deliver activities use zebra data tables with a dark red header; the competitive advantage and Deliver statement use stat tiles with a red rail.
+- **Action titles:** a full sentence stating the finding, Title Case, no full stop, 56 characters ideal and 66 maximum.
+- **Highlights:** at most 2 highlighted rows per table (red tint, bold, red first column). High force power is shown in red.
+- **Length limits:** statements about 28 words; competitive advantage and takeaways under about 95 characters; chain bullets 12 to 15 words; card bullets about 18 words; table cells about 20 words (buyers and suppliers rows up to about 40).
+- **If the script prints a WARNING,** shorten the text it names and rebuild.
+- **Writing:** short fragments, no filler, no em dashes or en dashes.
 
 ### 6.3 The positioning map (Create, slide 5): how to draw it for any company
 The lecture's position test plots firms on two axes, with a concave **competitive frontier** (the best WTP achievable at each cost level with today's technology).
@@ -304,7 +291,7 @@ The lecture's position test plots firms on two axes, with a concave **competitiv
   }
 }
 ```
-Every `takeaway` becomes that slide's summary bar. `titles` is optional (the script falls back to generic titles) but always write them: an action title that states the finding is the house style. Set `"highlight": true` on at most 2 rows per table. Use exactly six forces rows, in this order: Buyers, Suppliers, Rivalry, New entrants, Substitutes, Complements.
+Every `takeaway` becomes that slide's key-takeaway bar. `titles` is optional (the script falls back to generic titles) but always write them: an action title that states the finding is the house style. Set `"highlight": true` on at most 2 rows per table. Use exactly six forces rows, in this order: Buyers, Suppliers, Rivalry, New entrants, Substitutes, Complements.
 
 ## 7. Interview mode: answer like the Co-AI CEO
 
@@ -386,7 +373,7 @@ The professor tests whether the agent folds (abandons a sound claim under mere a
 | One Capture table, with buyers and suppliers first and fuller | The lecture demands the complete logic for buyer and supplier power. Putting it in the first two rows keeps one slide per question, as in the lecture. | A separate slide if a tester wants more depth. |
 | A DCCD chain slide right after the statements | The lecture's slide 3 shows how each stage feeds the next; filled for the firm, it bridges the four statements and the detail slides. | |
 | Two Deliver slides, no O column | Deliver is the O. Slide 8 links each activity to Define, Create and Capture; slide 9 follows the Gucci template (reinforcement, trade-offs, misalignment, judgment, risk), which Assignment 4 graded. | |
-| Carnegie Mellon (Tepper) design system | Action titles state each finding, so reading only the titles tells the whole strategy; native shapes and tables keep every number editable; lint checks catch overflow before the deck is returned. | |
+| Consulting layouts in Tepper red | Consulting-style band tables, cards and zebra tables read cleanly; the Tepper sidebar, logo and red palette give the brand; action titles state each finding, so the titles alone tell the strategy; everything stays native and editable. | |
 | Axes chosen per industry, frontier fixed | "Axes are what customers choose on", so attributes vary by industry, but the lecture's position-test form stays. | Calibrate positions with measured price and quality data. |
 | Research first, fact sheet, no invented numbers | Correctness: A1-A3 feedback penalized claims stronger than the evidence. | Automatic source footnotes. |
 | Pushback rules | The lecture asks us to fix where the agent "folds or digs in". | |

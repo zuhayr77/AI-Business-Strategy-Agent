@@ -35,7 +35,7 @@ Built at Carnegie Mellon's Tepper School of Business (MSBA), where it was tested
 1. **Research:** the agent pulls the 8 to 15 facts the argument rests on (10-K, earnings, investor materials), each with a source. It never invents a number.
 2. **Reason:** it runs Define, Create, Capture and Deliver in order, then checks they are consistent (for example, that Deliver defends against the strongest force named in Capture).
 3. **Spec:** it writes the analysis into a JSON spec ([schema in SKILL.md](dccd-strategy-agent/SKILL.md)).
-4. **Render:** `build_deck.py` turns the spec into a deck in the Carnegie Mellon (Tepper) design system: action titles that state each finding, summary bars, a positioning map with a concave competitive frontier, native editable tables with highlighted key rows, and a lint check that warns if any text would not fit.
+4. **Render:** `build_deck.py` turns the spec into a deck that combines consulting-style layouts (band tables, cards, zebra tables, stat tiles) with the Tepper sidebar, logo and red palette: action titles that state each finding, key-takeaway bars, a positioning map with a concave competitive frontier, native editable tables with highlighted key rows, and a lint check that warns if any text would not fit.
 
 Besides decks, the skill has four other modes: a single DCCD statement, CEO-style Q&A, defending a claim under pushback, and explaining its own design choices.
 
@@ -45,7 +45,7 @@ Besides decks, the skill has four other modes: a single DCCD statement, CEO-styl
 dccd-strategy-agent/          the Claude Skill
   SKILL.md                    instructions: modes, research protocol, DCCD logic, deck rules
   scripts/build_deck.py       JSON spec -> .pptx deck
-  scripts/tepper_deck.py      design-system library (native shapes, tables, lint)
+  scripts/lcp_deck.py         consulting layout components (tables, cards, tiles)
   assets/brand/               tartan strip, Tepper T, title background
   examples/                   specs and finished decks: Nike, Capital One, Costco, Tesla, Duolingo
 docs/                         slide previews
