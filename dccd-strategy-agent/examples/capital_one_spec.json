@@ -1,0 +1,235 @@
+{
+ "company": "Capital One",
+ "group": "9 is Fine!",
+ "competitive_advantage": "decades of test-and-learn underwriting data plus its own payments network (Discover).",
+ "statements": {
+  "define": "For U.S. consumers across the credit spectrum, from rewards seekers to near-prime borrowers big banks underserve, plus businesses via Brex, Capital One offers risk-priced cards and fee-free digital banking.",
+  "create": "Capital One wins on lower cost of risk and service, not a price premium: data-driven underwriting lets it lend profitably where rivals won't (7.84% net interest margin, 2025).",
+  "capture": "Rivalry and network suppliers take most value in card issuing. Owning Discover lets Capital One keep the network's share: 25M debit cards moved, about $1B a year (est.).",
+  "deliver": "Test-and-learn underwriting, network ownership, cloud technology and a branch-light bank reinforce each other. It refuses big branch networks and investment banking."
+ },
+ "one_line": "Capital One prices risk better and owns the rails; watch whether underwriting holds through a downturn.",
+ "define": {
+  "who": [
+   "U.S. consumers across the credit spectrum: prime rewards seekers (Venture X, Savor) and near-prime borrowers big banks avoid",
+   "B2B via Brex: employees use the cards, finance teams decide, the company pays"
+  ],
+  "what": [
+   "Hired to give access to credit at a fair, personalized price, plus simple, fee-free digital banking",
+   "Today they use Chase, Citi, Amex, Bank of America, store cards (Synchrony) or fintechs (SoFi, Chime)"
+  ],
+  "problem": [
+   "Big banks price credit broadly, overcharging good near-prime risks or refusing them; branch banks charge fees",
+   "Capital One closes the gap with risk-priced offers and no-fee, no-overdraft 360 accounts"
+  ],
+  "takeaway": "Weakest premise: that near-prime customers stay profitable when the credit cycle turns."
+ },
+ "create": {
+  "wtp_vs_cost": [
+   "**Moves WTP:** credit access for underserved segments, travel rewards, fee-free banking",
+   "**Table stakes:** rewards, mobile app, fraud protection, broad acceptance",
+   "**Cost levers:** underwriting, cloud stack, branch-light deposits, owned network",
+   "**Wedge:** lower cost of risk: 7.84% net interest margin (2025)"
+  ],
+  "map_reading": [
+   "Axes: rewards and credit access vs cost to customer",
+   "Customers pick it for approval at a fair price",
+   "Capital One on the frontier; Citi and Synchrony inside"
+  ],
+  "takeaway": "A cost-of-risk advantage, not a price premium.",
+  "map": {
+   "y_label": "Rewards and credit access",
+   "x_label": "(fees and rates to customer)",
+   "firms": [
+    {
+     "name": "Amex",
+     "x": 1.2,
+     "y": 9.2,
+     "frontier": true
+    },
+    {
+     "name": "Chase",
+     "x": 3.8,
+     "y": 8.0,
+     "frontier": true
+    },
+    {
+     "name": "Capital One",
+     "x": 6.6,
+     "y": 6.8,
+     "focal": true,
+     "frontier": true
+    },
+    {
+     "name": "Citi",
+     "x": 4.6,
+     "y": 5.4
+    },
+    {
+     "name": "Synchrony",
+     "x": 5.6,
+     "y": 3.2
+    },
+    {
+     "name": "SoFi / Chime",
+     "x": 9.0,
+     "y": 3.5,
+     "frontier": true
+    }
+   ]
+  },
+  "vri": [
+   {
+    "resource": "Information-based underwriting and test-and-learn",
+    "type": "Capability",
+    "v": "Yes: prices risk precisely; 7.84% NIM",
+    "r": "Yes: decades of proprietary data and experiments",
+    "i": "Hard: path-dependent data, culture, causally ambiguous",
+    "verdict": "Sustained: the core advantage",
+    "highlight": true
+   },
+   {
+    "resource": "Discover network (owned rails)",
+    "type": "Resource (positional)",
+    "v": "Yes: keeps network fees; ~$1B Durbin-exempt debit (est.)",
+    "r": "Very: only Amex also owns a network among big issuers",
+    "i": "Costly: networks take decades and merchant acceptance",
+    "verdict": "Sustained, if acceptance scales",
+    "highlight": true
+   },
+   {
+    "resource": "Cloud-native tech stack (all-in AWS)",
+    "type": "Resource",
+    "v": "Yes: faster, cheaper models and launches",
+    "r": "Partly: rivals are migrating",
+    "i": "Imitable over time: cloud is buyable",
+    "verdict": "Temporary advantage"
+   },
+   {
+    "resource": "National brand and marketing scale",
+    "type": "Resource (positional)",
+    "v": "Yes: drives acquisition",
+    "r": "No: Chase, Amex match it",
+    "i": "Buyable with spend",
+    "verdict": "Parity"
+   }
+  ],
+  "vri_takeaway": "The tech is copyable; the data history and owned network are not."
+ },
+ "capture": {
+  "forces": [
+   {
+    "force": "Buyers (cardholders, merchants)",
+    "level": "Medium",
+    "logic": "Cardholders are fragmented but switch easily via balance transfers; rivals' rewards wars and BNPL raise their power. Merchants push back on interchange. Caps APRs and fees, squeezing margin.",
+    "firm_power": "Partly: risk-based pricing keeps near-prime customers who have fewer options"
+   },
+   {
+    "force": "Suppliers (networks, depositors, tech talent)",
+    "level": "High",
+    "logic": "Two networks (Visa, Mastercard) take a fee on every swipe and the Durbin rule caps debit fees; a fragmented issuer industry facing two networks raises their power. Squeezes issuer margins.",
+    "firm_power": "Yes: owns Discover; 25M debit cards moved, Durbin-exempt",
+    "highlight": true
+   },
+   {
+    "force": "Rivalry",
+    "level": "High",
+    "logic": "Chase, Amex, Citi, BofA fight with rewards and marketing; acquisition costs rise, margins erode.",
+    "firm_power": "Yes: underwriting lets it win segments rivals misprice",
+    "highlight": true
+   },
+   {
+    "force": "New entrants",
+    "level": "Medium",
+    "logic": "Fintechs launch on existing networks, but charters, capital and credit data are barriers.",
+    "firm_power": "Yes: scale, data and a charter"
+   },
+   {
+    "force": "Substitutes",
+    "level": "Medium",
+    "logic": "BNPL (Affirm, Klarna), debit and pay-by-bank replace revolving credit and interchange.",
+    "firm_power": "Partly: owning a network helps it play in debit"
+   },
+   {
+    "force": "Complements",
+    "level": "Medium",
+    "logic": "Digital wallets (Apple Pay) and merchant acceptance add value but take a cut or limit reach.",
+    "firm_power": "Partly: Discover acceptance lags abroad"
+   }
+  ],
+  "takeaway": "Rivalry and network suppliers take most value from card issuers; buying Discover lets Capital One keep the network's share."
+ },
+ "deliver": {
+  "statement": "Test-and-learn underwriting, an owned network, cloud technology and a branch-light bank form one data engine that serves underserved borrowers, lowers the cost of risk and takes back the fees networks charge; it refuses big branches and investment banking.",
+  "activities_takeaway": "Underwriting and the network carry the strategy; the rest feeds them data and cheap funding.",
+  "reinforcement": [
+   "Card and network data \u2192 better underwriting \u2192 profitable accounts \u2192 cheap deposits and more network volume \u2192 more data"
+  ],
+  "misaligned": [
+   "Discover's acceptance gaps abroad work against moving credit cards onto its own network",
+   "Heavy rewards marketing (Venture X) pulls toward the premium rivalry where it has no edge"
+  ],
+  "judgment": [
+   "Mostly organized: analytics has been central since its 1988 founding; network migration is half done (debit finished, credit still testing)"
+  ],
+  "takeaway": "The system depends on one thing: underwriting that keeps losses below rivals' as the credit cycle turns.",
+  "activities": [
+   {
+    "activity": "Test-and-learn underwriting and marketing",
+    "create_link": "Lowers cost of risk; tailored offers raise WTP",
+    "capture_link": "Wins segments rivals misprice",
+    "highlight": true,
+    "define_link": "Near-prime and prime customers each offered a personalized price"
+   },
+   {
+    "activity": "Owning and migrating to the Discover network",
+    "create_link": "Removes network fees, a cost lever",
+    "capture_link": "Neutralizes Visa/Mastercard supplier power",
+    "highlight": true,
+    "define_link": "Cardholders and merchants on owned rails"
+   },
+   {
+    "activity": "Cloud-native technology (all-in AWS)",
+    "create_link": "Faster, cheaper models and products",
+    "capture_link": "Speed against fintech entrants",
+    "define_link": "Digital-first customers wanting fast approvals"
+   },
+   {
+    "activity": "Branch-light digital bank (360, caf\u00e9s)",
+    "create_link": "Cheap deposits lower funding cost",
+    "capture_link": "Reduces reliance on wholesale funding",
+    "define_link": "Customers wanting fee-free digital banking"
+   },
+   {
+    "activity": "Brex business payments platform",
+    "create_link": "Extends underwriting to businesses",
+    "capture_link": "Commercial volume onto owned rails",
+    "define_link": "Businesses: finance teams buying spend management"
+   }
+  ],
+  "not_do": [
+   "No large branch network (gives up in-person customers)",
+   "No investment banking or wealth focus (gives up fee businesses big banks rely on)"
+  ]
+ },
+ "chain": {
+  "define": [
+   "**Who:** U.S. consumers across the credit spectrum, plus businesses via Brex",
+   "**What:** risk-priced credit cards and fee-free digital banking",
+   "**Problem solved:** big banks misprice near-prime risk and charge fees"
+  ],
+  "create": [
+   "**WTP vs. cost:** wedge from lower cost of risk and service",
+   "**Positioning map:** on the frontier between Chase and fintechs",
+   "**VRI:** underwriting and Discover network sustained; cloud only temporary"
+  ],
+  "capture": [
+   "**Six forces:** rivalry and network suppliers are strongest",
+   "**Power:** owns the network rivals rent; prices near-prime risk others can't"
+  ],
+  "deliver": [
+   "**Activities:** test-and-learn, network ownership, cloud tech, branch-light bank",
+   "**Fit:** more data, better pricing, cheaper deposits, more network volume"
+  ]
+ }
+}

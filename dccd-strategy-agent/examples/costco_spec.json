@@ -1,0 +1,225 @@
+{
+ "company": "Costco",
+ "group": "9 is Fine!",
+ "statements": {
+  "define": "For value-seeking households and small businesses that buy in bulk, Costco offers a paid membership to warehouses of about 4,000 trusted items at the lowest prices.",
+  "create": "Costco wins on lower cost: markups capped at 14% (15% on Kirkland) and huge volume per item, with a quality kicker from Kirkland. A sustained advantage.",
+  "capture": "Rivalry and price-sensitive buyers cap grocery margins. Costco keeps more: fees ($5.3B, 92.3% U.S./Canada renewal) are near-pure profit, and volume gives it supplier leverage.",
+  "deliver": "Limited SKUs, no-frills warehouses, Kirkland and low-turnover staff reinforce each other to keep prices lowest. It refuses wide selection and high merchandise margins."
+ },
+ "one_line": "Costco trades retail margin for loyalty; watch renewal staying above about 90%.",
+ "define": {
+  "who": [
+   "Mid-to-upper-income households buying in bulk, plus small businesses (Business members)",
+   "B2C: the member uses, decides and pays; for businesses, the owner decides and pays"
+  ],
+  "what": [
+   "Hired to stock up on trusted, high-quality goods at the lowest price per unit, in one trip",
+   "Today they use supermarkets (Kroger), Walmart, Sam's Club, BJ's, Amazon and Aldi"
+  ],
+  "problem": [
+   "Supermarkets offer choice at higher prices; discounters are cheap but quality is uneven",
+   "Costco closes the gap: curated quality at near-wholesale prices, for an annual fee"
+  ],
+  "takeaway": "Weakest premise: that members keep renewing for the fee as online sign-ups (which renew less) grow."
+ },
+ "create": {
+  "wtp_vs_cost": [
+   "**Moves WTP:** curated quality, Kirkland trust, treasure-hunt items",
+   "**Table stakes:** low prices, gas stations, online ordering",
+   "**Cost levers:** ~4,000 SKUs, bulk packs, no-frills warehouses",
+   "**Wedge:** lower cost: ~11% gross margin vs Walmart's ~24%"
+  ],
+  "map_reading": [
+   "Axes: quality and trust vs price per unit",
+   "Members pick it for quality at near-wholesale prices",
+   "Costco on the frontier; Sam's Club inside it"
+  ],
+  "takeaway": "Low cost with a quality kicker.",
+  "map": {
+   "y_label": "Product quality and trust",
+   "x_label": "(price per unit)",
+   "firms": [
+    {
+     "name": "Whole Foods",
+     "x": 1.0,
+     "y": 9.2,
+     "frontier": true
+    },
+    {
+     "name": "Kroger",
+     "x": 4.0,
+     "y": 6.2
+    },
+    {
+     "name": "Costco",
+     "x": 7.8,
+     "y": 7.2,
+     "focal": true,
+     "frontier": true
+    },
+    {
+     "name": "Walmart",
+     "x": 7.0,
+     "y": 4.2
+    },
+    {
+     "name": "Sam's Club",
+     "x": 7.6,
+     "y": 5.0
+    },
+    {
+     "name": "Aldi",
+     "x": 9.3,
+     "y": 3.6,
+     "frontier": true
+    }
+   ]
+  },
+  "vri": [
+   {
+    "resource": "Membership model: fees fund low markups",
+    "type": "Capability (business model)",
+    "v": "Yes: $5.3B fees let prices run near cost",
+    "r": "Partly: Sam's and BJ's copy the format",
+    "i": "Hard: 92.3% renewal and scale took decades to build",
+    "verdict": "Sustained, when paired with the SKU system",
+    "highlight": true
+   },
+   {
+    "resource": "Limited-SKU, high-volume buying",
+    "type": "Capability",
+    "v": "Yes: huge volume per item lowers unit cost",
+    "r": "Yes: few retailers commit to ~4,000 SKUs",
+    "i": "Costly: rivals would lose selection-seeking customers",
+    "verdict": "Sustained: the trade-off deters copying",
+    "highlight": true
+   },
+   {
+    "resource": "Kirkland Signature brand",
+    "type": "Resource (positional)",
+    "v": "Yes: quality at lower cost; ~25% of sales (est.)",
+    "r": "Yes at this trust level",
+    "i": "Path-dependent: decades of quality reputation",
+    "verdict": "Sustained; reinforces WTP"
+   }
+  ],
+  "vri_takeaway": "Each part is copyable alone; the system (fees + few SKUs + Kirkland) is not, because copying it means giving up selection and margin."
+ },
+ "capture": {
+  "forces": [
+   {
+    "force": "Buyers (households, businesses)",
+    "level": "High",
+    "logic": "Shoppers are fragmented but price-sensitive and switch stores easily; rivals (Walmart, Amazon) and substitutes (Aldi, delivery) raise their power. Keeps grocery markups thin.",
+    "firm_power": "Yes: the paid fee raises switching costs; renewal 92.3%",
+    "highlight": true
+   },
+   {
+    "force": "Suppliers (brands, producers)",
+    "level": "Medium",
+    "logic": "Big brands (P&G, Coca-Cola) are concentrated and differentiated; fragmented retailers raise their power, a huge buyer lowers it. Brands keep margin; retailers absorb pressure.",
+    "firm_power": "Yes: huge volume per SKU and Kirkland as an alternative"
+   },
+   {
+    "force": "Rivalry",
+    "level": "High",
+    "logic": "Walmart, Sam's, BJ's, Amazon, Kroger, Aldi compete on price; slow growth makes it share-taking.",
+    "firm_power": "Yes: lowest unit prices plus fee income cushion price wars",
+    "highlight": true
+   },
+   {
+    "force": "New entrants",
+    "level": "Low",
+    "logic": "Warehouse scale, real estate and supplier terms take decades; online entry is easier but margin-thin.",
+    "firm_power": "Yes: scale and member base"
+   },
+   {
+    "force": "Substitutes",
+    "level": "Medium",
+    "logic": "Online delivery (Amazon, Instacart) and discount grocers (Aldi) replace the bulk trip.",
+    "firm_power": "Partly: e-commerce and delivery lag Amazon"
+   },
+   {
+    "force": "Complements",
+    "level": "Low",
+    "logic": "Credit-card partner (Citi/Visa) and gas add trip value; few complementors take a cut.",
+    "firm_power": "Yes: co-brand card adds income"
+   }
+  ],
+  "takeaway": "Rivalry and buyers cap retail margins for everyone; Costco keeps value through fees, not merchandise margin."
+ },
+ "deliver": {
+  "statement": "Limited SKUs, membership, Kirkland, no-frills warehouses and well-paid staff form one low-cost system that serves bulk buyers, keeps prices lowest, and locks in members; it refuses wide selection and high markups.",
+  "activities_takeaway": "Membership and limited SKUs carry the strategy; Kirkland and staff reinforce them.",
+  "reinforcement": [
+   "Low markups \u2192 more members and renewals \u2192 fee income \u2192 keeps markups low \u2192 more volume per SKU \u2192 better supplier terms"
+  ],
+  "misaligned": [
+   "Growing online membership sign-ups renew at lower rates, weakening the renewal engine"
+  ],
+  "judgment": [
+   "Organized to execute: renewal is the core metric, and turnover is low (about 6 to 8%, est.)"
+  ],
+  "takeaway": "The system depends on one thing: renewal staying above about 90% as fees rise.",
+  "activities": [
+   {
+    "activity": "Limited assortment (~4,000 SKUs)",
+    "create_link": "Lower cost: massive volume per item cuts unit prices",
+    "capture_link": "Leverage over suppliers; bulk deals",
+    "highlight": true,
+    "define_link": "Bulk buyers who trust a curated range"
+   },
+   {
+    "activity": "Membership fees and renewal focus",
+    "create_link": "Funds 14% markup cap, so prices stay lowest",
+    "capture_link": "Locks in price-sensitive buyers; fees are near-pure profit",
+    "highlight": true,
+    "define_link": "Value-seeking households and businesses"
+   },
+   {
+    "activity": "Kirkland Signature private label",
+    "create_link": "Quality at lower cost raises WTP and trust",
+    "capture_link": "Reduces dependence on powerful brand suppliers",
+    "define_link": "Members wanting quality at the lowest price"
+   },
+   {
+    "activity": "No-frills bulk warehouses",
+    "create_link": "Low operating cost per sale",
+    "capture_link": "Scale deters entrants",
+    "define_link": "Shoppers who trade service for price"
+   },
+   {
+    "activity": "High pay, low-turnover workforce",
+    "create_link": "Productive staff lower cost per sale",
+    "capture_link": "Weakens labor's bargaining as a supplier; ~$31/hr avg",
+    "define_link": "Members expecting helpful, consistent staff"
+   }
+  ],
+  "not_do": [
+   "No wide selection or many brands per category (gives up one-stop choice)",
+   "No high merchandise margins or heavy advertising (gives up retail profit)"
+  ]
+ },
+ "competitive_advantage": "membership fees funding capped markups, plus ~4,000 SKUs bought at massive volume.",
+ "chain": {
+  "define": [
+   "**Who:** value-seeking households and small businesses buying in bulk",
+   "**What:** a paid membership to curated, low-price warehouses",
+   "**Problem solved:** supermarkets cost more; discounters lack trusted quality"
+  ],
+  "create": [
+   "**WTP vs. cost:** wedge from lower cost; Kirkland adds quality",
+   "**Positioning map:** on the frontier at low price, above Sam's and BJ's",
+   "**VRI:** the fee-plus-few-SKUs system is sustained"
+  ],
+  "capture": [
+   "**Six forces:** rivalry and price-sensitive buyers are strongest",
+   "**Power:** fees lock in buyers; volume and Kirkland give supplier leverage"
+  ],
+  "deliver": [
+   "**Activities:** limited SKUs, membership, Kirkland, no-frills warehouses, paid staff",
+   "**Fit:** low markups bring members, fees fund low markups"
+  ]
+ }
+}

@@ -1,0 +1,236 @@
+{
+ "company": "Nike",
+ "group": "9 is Fine!",
+ "competitive_advantage": "the world's strongest sports brand and athlete roster (including Jordan); rivals can't buy decades of brand heat.",
+ "statements": {
+  "define": "For athletes and sport-inspired consumers, especially young sneaker buyers, Nike offers performance and lifestyle footwear and apparel that help them perform and express identity.",
+  "create": "Nike wins on higher WTP: brand, athletes and innovation support premium prices (42.9% gross margin, FY2026). The brand is a sustained advantage; product innovation is now only temporary.",
+  "capture": "Rivalry and powerful retailers take value through discounting and shelf space. Nike's brand keeps pricing power, but its direct-to-consumer push ceded shelves to On and Hoka.",
+  "deliver": "Athlete marketing, innovation, outsourced manufacturing and rebuilt wholesale reinforce one brand-heat engine. Nike refuses owned factories and low-price lines; the risk is a slower innovation pipeline."
+ },
+ "one_line": "Nike sells brand heat at premium prices; watch whether innovation wins back share from On and Hoka.",
+ "chain": {
+  "define": [
+   "**Who:** athletes and sport-inspired consumers, especially young sneaker buyers",
+   "**What:** performance and lifestyle footwear and apparel",
+   "**Problem solved:** perform better and express identity through sport"
+  ],
+  "create": [
+   "**WTP vs. cost:** wedge from WTP (brand, athletes); cost from outsourced scale",
+   "**Positioning map:** premium and on the frontier, pressured by On and Hoka",
+   "**VRI:** brand and Jordan sustained; innovation only temporary"
+  ],
+  "capture": [
+   "**Six forces:** rivalry and retailer (buyer) power are strongest",
+   "**Power:** brand pull beats most rivals; weaker with retailers after the direct-to-consumer push"
+  ],
+  "deliver": [
+   "**Activities:** athlete marketing, innovation, outsourced manufacturing, rebuilt wholesale",
+   "**Fit:** athletes create brand heat, full prices fund more athletes and innovation"
+  ]
+ },
+ "define": {
+  "who": [
+   "Athletes and sport-inspired consumers worldwide, especially teens and young adults in sneaker culture",
+   "B2C: the consumer uses, decides and pays; retailers (Foot Locker, Dick's) are the channel"
+  ],
+  "what": [
+   "Hired to help them perform in sport and express identity through what they wear",
+   "Today they use Adidas, On, Hoka, New Balance, Asics or cheaper generic brands"
+  ],
+  "problem": [
+   "Generic shoes don't perform or signal status; niche brands lack range and cultural reach",
+   "Nike closes the gap with performance technology plus the strongest brand in sport"
+  ],
+  "takeaway": "Weakest premise: that young consumers still see Nike as the most exciting brand."
+ },
+ "create": {
+  "wtp_vs_cost": [
+   "**Moves WTP:** brand and athletes, Jordan, Air and ZoomX innovation, cultural hype",
+   "**Table stakes:** comfort, fit, availability, everyday styling",
+   "**Cost levers:** outsourced manufacturing at scale, global sourcing, marketing scale",
+   "**Wedge:** higher WTP: premium prices with a 42.9% gross margin (FY2026)"
+  ],
+  "map_reading": [
+   "Axes: brand prestige and innovation vs price",
+   "Customers pick Nike for brand and sport; On and Hoka for running innovation",
+   "Nike, Adidas and Skechers sit on the frontier; New Balance sits inside it"
+  ],
+  "takeaway": "A WTP position resting on the brand more than on products.",
+  "map": {
+   "y_label": "Brand prestige and innovation",
+   "x_label": "(price to customer)",
+   "firms": [
+    {
+     "name": "On",
+     "x": 1.5,
+     "y": 8.8,
+     "frontier": true
+    },
+    {
+     "name": "Nike",
+     "x": 4.0,
+     "y": 8.0,
+     "focal": true,
+     "frontier": true
+    },
+    {
+     "name": "Hoka",
+     "x": 2.5,
+     "y": 6.6
+    },
+    {
+     "name": "Adidas",
+     "x": 6.0,
+     "y": 6.5,
+     "frontier": true
+    },
+    {
+     "name": "New Balance",
+     "x": 4.4,
+     "y": 4.3
+    },
+    {
+     "name": "Skechers",
+     "x": 8.8,
+     "y": 4.6,
+     "frontier": true
+    }
+   ]
+  },
+  "vri": [
+   {
+    "resource": "Brand and athlete roster",
+    "type": "Resource (positional)",
+    "v": "Yes: premium prices and demand pull",
+    "r": "Yes: no rival matches its reach",
+    "i": "Hard: decades of path-dependent brand building",
+    "verdict": "Sustained, though fading with youth",
+    "highlight": true
+   },
+   {
+    "resource": "Jordan brand",
+    "type": "Resource (positional)",
+    "v": "Yes: high-margin cultural icon",
+    "r": "Yes: unique",
+    "i": "Very hard: can't be recreated",
+    "verdict": "Sustained",
+    "highlight": true
+   },
+   {
+    "resource": "Product innovation (Air, ZoomX, Flyknit)",
+    "type": "Capability",
+    "v": "Yes: performance justifies price",
+    "r": "Partly: On and Hoka out-innovated it in running",
+    "i": "Imitable: rivals catch up within a product cycle",
+    "verdict": "Temporary advantage"
+   },
+   {
+    "resource": "Global distribution and marketing scale",
+    "type": "Resource",
+    "v": "Yes: reach and visibility",
+    "r": "Partly: Adidas matches",
+    "i": "Costly, but Adidas has it",
+    "verdict": "Parity with Adidas"
+   }
+  ],
+  "vri_takeaway": "The brand holds; products no longer pass inimitability on their own."
+ },
+ "capture": {
+  "forces": [
+   {
+    "force": "Buyers (retailers, consumers)",
+    "level": "High",
+    "logic": "Big retailers (Foot Locker, Dick's, JD Sports) control shelf space, and consumers switch brands freely; rivals filling the shelves Nike left raise their power. Forces markdowns.",
+    "firm_power": "Partly: brand still pulls traffic; wholesale rebuilt to $27.5B in FY2026",
+    "highlight": true
+   },
+   {
+    "force": "Suppliers (contract factories, materials)",
+    "level": "Low",
+    "logic": "Many contract factories in Vietnam, Indonesia and China compete for Nike's volume; tariffs (about $1.5B, FY2026) raise costs for the whole industry.",
+    "firm_power": "Yes: its scale makes it the anchor customer"
+   },
+   {
+    "force": "Rivalry",
+    "level": "High",
+    "logic": "Adidas, On, Hoka, New Balance and Asics fight on innovation and hype; fashion cycles shift fast; discounting erodes margins.",
+    "firm_power": "Partly: brand leads overall; lost share in running",
+    "highlight": true
+   },
+   {
+    "force": "New entrants",
+    "level": "Medium",
+    "logic": "Contract manufacturing and social media let brands like On scale fast; global marketing scale still deters most.",
+    "firm_power": "Yes vs most: scale and athlete deals"
+   },
+   {
+    "force": "Substitutes",
+    "level": "Low",
+    "logic": "Non-sport casual shoes and resale (StockX) substitute only partly; resale often adds hype.",
+    "firm_power": "Yes: owns the hype resale feeds on"
+   },
+   {
+    "force": "Complements",
+    "level": "Medium",
+    "logic": "Leagues (NBA, NFL), athletes and social media amplify the brand but charge for access.",
+    "firm_power": "Yes: long league and athlete contracts"
+   }
+  ],
+  "takeaway": "Rivalry and retailers cap prices; Nike keeps value only while the brand stays hot."
+ },
+ "deliver": {
+  "statement": "Athlete marketing, sport-led innovation, outsourced scale manufacturing and rebuilt wholesale form one brand-heat engine that serves sport-inspired consumers, protects Nike's premium, and wins back retailer shelves; Nike refuses owned factories and low-price lines.",
+  "activities": [
+   {
+    "activity": "Athlete endorsements and demand creation (Jordan, LeBron)",
+    "define_link": "Makes Nike the brand of sport for athletes and young sneaker buyers",
+    "create_link": "Brand heat lifts WTP: the core of the premium",
+    "capture_link": "Pull demand makes retailers stock Nike despite rivals",
+    "highlight": true
+   },
+   {
+    "activity": "Sport-led product innovation (Air, ZoomX)",
+    "define_link": "Gives athletes real performance, not just a logo",
+    "create_link": "Gives the brand something new to sell at full price",
+    "capture_link": "Differentiation is the only answer to On and Hoka in running",
+    "highlight": true
+   },
+   {
+    "activity": "Outsourced manufacturing at scale",
+    "define_link": "Keeps product available in every market",
+    "create_link": "Lowers cost per pair, widening the wedge",
+    "capture_link": "Volume keeps contract-factory (supplier) power low"
+   },
+   {
+    "activity": "Rebuilt wholesale plus Nike Direct",
+    "define_link": "Reaches consumers where they shop",
+    "create_link": "More full-price selling, less discounting",
+    "capture_link": "Repairs retailer (buyer) relationships; wholesale up to $27.5B"
+   },
+   {
+    "activity": "Sport-led organization (Win Now)",
+    "define_link": "Organizes around athletes by sport",
+    "create_link": "Sharper, sport-specific products",
+    "capture_link": "Fights rivals category by category"
+   }
+  ],
+  "activities_takeaway": "Athlete marketing and innovation carry the strategy; the other activities support them.",
+  "reinforcement": [
+   "Athletes \u2192 brand heat \u2192 full-price sales \u2192 margin funds more athletes and innovation \u2192 more brand heat",
+   "Innovation gives retailers a reason to give Nike shelf space, which puts athletes' stories in front of more buyers"
+  ],
+  "not_do": [
+   "No owned factories (gives up manufacturing control for flexibility and lower cost)",
+   "No low-price segment (leaves value buyers to Skechers and private labels)"
+  ],
+  "misaligned": [
+   "The 2020-24 direct-to-consumer push cut wholesale partners and ceded shelves to On and Hoka (now reversing)",
+   "Leaning on lifestyle franchises (Dunk, Air Force 1) instead of new performance products weakened innovation"
+  ],
+  "judgment": [
+   "Partly organized: the brand engine is intact, but innovation and channels drifted; Win Now is realigning them (Direct down to $17.7B, wholesale up)"
+  ],
+  "takeaway": "The system depends on one thing: innovation that keeps the brand hot with young consumers."
+ }
+}

@@ -1,0 +1,234 @@
+{
+ "company": "Tesla",
+ "group": "9 is Fine!",
+ "competitive_advantage": "the largest connected fleet feeding self-driving data, plus high-volume integrated manufacturing.",
+ "statements": {
+  "define": "For tech-forward, mid-to-upper income EV buyers, plus utilities needing storage, Tesla offers software-defined cars that improve over time and charge easily.",
+  "create": "Tesla wins mainly on lower cost against legacy automakers, with WTP from software and charging. Against BYD it is neither cheapest nor premium: a temporary advantage.",
+  "capture": "EVs are a price war: rivalry and buyers take most value (deliveries -9% in 2025; BYD sold 2.25M BEVs). Direct sales, charging and FSD subscriptions protect some margin.",
+  "deliver": "Software, gigafactories, direct sales and Superchargers reinforce each other: more cars, more data, more FSD revenue. Tesla refuses dealers, broad model ranges and advertising."
+ },
+ "one_line": "Tesla is becoming a low-cost producer plus autonomy platform; watch FSD revenue versus margin erosion.",
+ "define": {
+  "who": [
+   "Tech-forward, mid-to-upper income EV buyers in the U.S., China and Europe; B2C: the driver uses, decides and pays",
+   "B2B: utilities and businesses buying Megapack storage (procurement decides, utility pays)"
+  ],
+  "what": [
+   "Hired to give a car that gets better through software, with easy fast charging, at a competitive price",
+   "Today they use gas cars and hybrids (Toyota), legacy EVs (VW, Hyundai, GM) or Chinese EVs (BYD, Xiaomi)"
+  ],
+  "problem": [
+   "Gas cars cost more to run; many EVs have weak software and patchy charging",
+   "Tesla closes the gap with over-the-air updates, Full Self-Driving and the largest North American fast-charging network"
+  ],
+  "takeaway": "Weakest premise: that buyers keep paying for software (FSD) as cheaper EVs flood the market."
+ },
+ "create": {
+  "wtp_vs_cost": [
+   "**Moves WTP:** FSD and software updates, Supercharger convenience, performance",
+   "**Table stakes:** range, safety ratings, a modern screen",
+   "**Cost levers:** gigafactory scale, gigacasting, own batteries, no dealers",
+   "**Wedge:** lower cost vs legacy makers: 18.0% gross margin (2025)"
+  ],
+  "map_reading": [
+   "Axes: software and charging experience vs price",
+   "Buyers pick Tesla for software and charging",
+   "BYD on the frontier at lower cost; Ford and GM inside"
+  ],
+  "takeaway": "A cost position with a software kicker, squeezed by BYD.",
+  "map": {
+   "y_label": "Software and charging experience",
+   "x_label": "(price to customer)",
+   "firms": [
+    {
+     "name": "Porsche / Lucid",
+     "x": 1.0,
+     "y": 9.0,
+     "frontier": true
+    },
+    {
+     "name": "Mercedes EVs",
+     "x": 2.2,
+     "y": 5.6
+    },
+    {
+     "name": "Tesla",
+     "x": 6.2,
+     "y": 7.3,
+     "focal": true,
+     "frontier": true
+    },
+    {
+     "name": "Xiaomi",
+     "x": 7.5,
+     "y": 6.0
+    },
+    {
+     "name": "Ford / GM EVs",
+     "x": 3.8,
+     "y": 3.4
+    },
+    {
+     "name": "BYD",
+     "x": 9.0,
+     "y": 4.3,
+     "frontier": true
+    }
+   ]
+  },
+  "vri": [
+   {
+    "resource": "Software and fleet-data loop (FSD, OTA updates)",
+    "type": "Capability",
+    "v": "Yes: FSD subscriptions (1.48M) and robotaxi option",
+    "r": "Yes: largest camera fleet collecting driving data",
+    "i": "Hard: data feedback loop compounds; Waymo leads driverless rides",
+    "verdict": "Temporary, sustained if autonomy proves out",
+    "highlight": true
+   },
+   {
+    "resource": "Integrated, high-volume manufacturing (gigacasting, own cells)",
+    "type": "Capability",
+    "v": "Yes: lower unit cost lets it cut prices profitably",
+    "r": "Partly: BYD is more integrated",
+    "i": "Hard for legacy makers; Chinese rivals match",
+    "verdict": "Temporary advantage vs legacy; parity vs BYD",
+    "highlight": true
+   },
+   {
+    "resource": "Supercharger network",
+    "type": "Resource (positional)",
+    "v": "Yes: convenience raises WTP",
+    "r": "Fading: rivals now plug in via NACS",
+    "i": "Costly to build, but access is now shared",
+    "verdict": "Now a capture asset (fees), not a WTP edge"
+   },
+   {
+    "resource": "Brand",
+    "type": "Resource (positional)",
+    "v": "Yes, but polarizing",
+    "r": "Partly",
+    "i": "Path-dependent",
+    "verdict": "Weakening (deliveries down 9%)"
+   }
+  ],
+  "vri_takeaway": "Manufacturing scale is being matched in China; the durable edge depends on the software loop paying off."
+ },
+ "capture": {
+  "forces": [
+   {
+    "force": "Buyers (car buyers, fleets)",
+    "level": "High",
+    "logic": "Many EV options, easy comparison, and the end of the U.S. EV tax credit raise price sensitivity; more rivals and cheap Chinese EVs push buyer power up. Forces price cuts that compress margins.",
+    "firm_power": "Partly: software, FSD and charging lock in some owners; direct sales control price, but deliveries fell 9%",
+    "highlight": true
+   },
+   {
+    "force": "Suppliers (battery cells, lithium, chips)",
+    "level": "Medium",
+    "logic": "Cell makers (CATL, Panasonic, LG) are concentrated and key; China dominates materials, and tariffs add cost. Fragmented automakers raise supplier power; in-house cells lower it.",
+    "firm_power": "Partly: scale contracts and in-house 4680 cells give leverage legacy rivals lack"
+   },
+   {
+    "force": "Rivalry",
+    "level": "High",
+    "logic": "BYD (2.25M BEVs vs Tesla's 1.63M), Xiaomi, VW and Hyundai fight on price in China and Europe; price wars erode margins.",
+    "firm_power": "Partly: lower cost than legacy makers; no edge on cost vs BYD",
+    "highlight": true
+   },
+   {
+    "force": "New entrants",
+    "level": "Medium",
+    "logic": "Chinese tech firms enter fast using China's supply chain; capital and scale still deter most.",
+    "firm_power": "Yes vs most entrants: scale and brand"
+   },
+   {
+    "force": "Substitutes",
+    "level": "Medium",
+    "logic": "Hybrids and gas cars, and robotaxi services (Waymo) for not owning a car at all.",
+    "firm_power": "Partly: robotaxi is Tesla's own bet on the substitute"
+   },
+   {
+    "force": "Complements",
+    "level": "Medium",
+    "logic": "Charging and electricity prices shape EV value; NACS made Tesla the charging complement others pay.",
+    "firm_power": "Yes: owns the largest North American fast-charging network"
+   }
+  ],
+  "takeaway": "Rivalry and buyers take most of the value in EVs; Tesla's escape route is software revenue that buyers can't get elsewhere."
+ },
+ "deliver": {
+  "statement": "In-house software, integrated gigafactories, direct sales and Superchargers form one software-and-scale system that serves tech-forward buyers, cuts cost, and earns subscription revenue outside the price war; it refuses dealers and broad model ranges.",
+  "activities_takeaway": "Software and gigafactories carry the strategy; direct sales and charging support them.",
+  "reinforcement": [
+   "More cars \u2192 more fleet data \u2192 better FSD \u2192 more subscription revenue \u2192 funds scale and price cuts \u2192 more cars"
+  ],
+  "misaligned": [
+   "An aging, narrow model lineup works against volume while BYD launches cheaper models",
+   "Repeated price cuts erode the WTP the software is meant to build"
+  ],
+  "judgment": [
+   "Partly organized: software and manufacturing are strong; the product pipeline lags rivals"
+  ],
+  "takeaway": "The system depends on one thing: autonomy arriving before car margins erode further.",
+  "activities": [
+   {
+    "activity": "In-house software, FSD and OTA updates",
+    "define_link": "Tech-forward buyers wanting a car that improves",
+    "create_link": "Raises WTP via FSD and new features",
+    "capture_link": "Subscription revenue outside the price war",
+    "highlight": true
+   },
+   {
+    "activity": "Integrated gigafactory manufacturing",
+    "define_link": "Mass-market buyers needing lower prices",
+    "create_link": "Lowers unit cost (gigacasting, own cells)",
+    "capture_link": "Survives price wars vs rivals",
+    "highlight": true
+   },
+   {
+    "activity": "Direct sales and service (no dealers)",
+    "define_link": "Buyers wanting a simple online purchase",
+    "create_link": "Removes dealer margin (cost)",
+    "capture_link": "Controls price; no channel intermediary"
+   },
+   {
+    "activity": "Supercharger network (NACS)",
+    "define_link": "Owners needing easy long-distance charging",
+    "create_link": "Raises WTP through convenience",
+    "capture_link": "Rivals' drivers pay Tesla to charge"
+   },
+   {
+    "activity": "Energy storage (Megapack)",
+    "define_link": "Utilities needing grid storage",
+    "create_link": "Reuses battery scale and know-how",
+    "capture_link": "Diversifies away from auto rivalry (46.7 GWh, +49%)"
+   }
+  ],
+  "not_do": [
+   "No dealer network or paid advertising (gives up local reach and marketing)",
+   "No broad model range (gives up segments like cheap compacts and trucks at scale)"
+  ]
+ },
+ "chain": {
+  "define": [
+   "**Who:** tech-forward EV buyers, plus utilities buying storage",
+   "**What:** software-defined cars and Megapacks",
+   "**Problem solved:** static gas cars and EVs with weak software or charging"
+  ],
+  "create": [
+   "**WTP vs. cost:** cost wedge vs legacy makers; WTP from software",
+   "**Positioning map:** on the frontier, squeezed from below by BYD",
+   "**VRI:** software loop and scale temporary; sustained only if autonomy works"
+  ],
+  "capture": [
+   "**Six forces:** rivalry and price-sensitive buyers are strongest",
+   "**Power:** beats legacy rivals on cost; no edge over BYD"
+  ],
+  "deliver": [
+   "**Activities:** software and FSD, gigafactories, direct sales, Superchargers",
+   "**Fit:** more cars bring more data, funding scale and price cuts"
+  ]
+ }
+}

@@ -1,0 +1,208 @@
+{
+ "company": "Duolingo",
+ "group": "9 is Fine!",
+ "competitive_advantage": "a habit engine (streaks, leagues) tuned by experiments on 58.7M daily users; rivals can copy features, not the data and habit.",
+ "statements": {
+  "define": "For casual, self-motivated learners worldwide who want a language (now also math, music, chess) in minutes a day, Duolingo offers a free, game-like app replacing costly classes most people quit.",
+  "create": "Duolingo wins on lower cost: free to learners, near-zero cost per extra user (72.2% gross margin, 2025), with WTP from fun and streaks. The habit engine is sustained; content is now parity.",
+  "capture": "Substitutes and buyers take most value: free AI tutors, and about 91% of users pay nothing. Streaks keep learners (42% daily/monthly ratio), but app stores take a cut of subscriptions.",
+  "deliver": "A gamified habit engine, AI-built content, a freemium upsell and mascot-led marketing reinforce one engagement loop. Duolingo refuses live teachers and paywalls; the risk is free AI tutors becoming more fun."
+ },
+ "one_line": "Duolingo turns learning into a free daily habit; watch whether free AI tutors break the habit.",
+ "chain": {
+  "define": [
+   "**Who:** casual, self-motivated learners worldwide, mostly on smartphones",
+   "**What:** a free, game-like app for languages, math, music and chess",
+   "**Problem solved:** classes and paid apps cost money and willpower; most learners quit"
+  ],
+  "create": [
+   "**WTP vs. cost:** wedge from lower cost (free, near-zero marginal cost); WTP from fun",
+   "**Positioning map:** on the frontier at the lowest price, below tutors and Speak",
+   "**VRI:** habit engine and brand sustained; AI content only parity"
+  ],
+  "capture": [
+   "**Six forces:** substitutes (free AI tutors) and free-riding buyers are strongest",
+   "**Power:** streaks and brand hold learners; weaker against app-store fees"
+  ],
+  "deliver": [
+   "**Activities:** habit engine, AI content, freemium upsell, organic marketing, new subjects",
+   "**Fit:** more learners bring more test data, stickier lessons and more learners"
+  ]
+ },
+ "define": {
+  "who": [
+   "Casual, self-motivated learners worldwide (140.6M monthly users, Q2 2026), learning for travel, school or self-improvement",
+   "B2C freemium: the learner uses, decides and pays; about 9% pay (12.7M of 140.6M)"
+  ],
+  "what": [
+   "Hired to make learning feel like a five-minute daily game they actually keep up",
+   "Today they use classes, tutors (Preply, italki), Babbel, Rosetta Stone, Speak, ChatGPT or nothing"
+  ],
+  "problem": [
+   "Classes and tutors cost money and schedules; paid apps feel like work, so most learners quit",
+   "Duolingo closes the gap with a free app, streaks and game mechanics that keep learners returning"
+  ],
+  "takeaway": "Weakest premise: that a game-like habit beats a free AI tutor that teaches real conversation."
+ },
+ "create": {
+  "wtp_vs_cost": [
+   "**Moves WTP:** fun, streaks and leagues, the Duo brand, AI features (Video Call)",
+   "**Table stakes:** many languages, mobile app, speech recognition",
+   "**Cost levers:** free core, near-zero cost per extra user, AI-built content, organic marketing",
+   "**Wedge:** lower cost: free to users with a 72.2% gross margin (2025)"
+  ],
+  "map_reading": [
+   "Axes: learning results and engagement vs price to learner",
+   "Learners pick Duolingo for free, fun practice",
+   "Tutors and Speak sit higher; Babbel and Rosetta Stone inside"
+  ],
+  "takeaway": "A low-cost position with a fun kicker, not a learning-depth premium.",
+  "map": {
+   "y_label": "Learning results and engagement",
+   "x_label": "(price to learner)",
+   "firms": [
+    {"name": "Tutors (Preply)", "x": 1.0, "y": 9.0, "frontier": true},
+    {"name": "Rosetta Stone", "x": 2.6, "y": 4.6},
+    {"name": "Babbel", "x": 4.6, "y": 6.2},
+    {"name": "Speak (AI tutor)", "x": 5.6, "y": 8.0, "frontier": true},
+    {"name": "Duolingo", "x": 8.4, "y": 6.0, "focal": true, "frontier": true},
+    {"name": "ChatGPT (free)", "x": 9.6, "y": 2.4}
+   ]
+  },
+  "vri": [
+   {
+    "resource": "Gamified habit engine plus A/B testing at scale",
+    "type": "Capability",
+    "v": "Yes: keeps learners daily; 42% DAU/MAU",
+    "r": "Yes: no rival tests on 58.7M daily users",
+    "i": "Hard: data loop and tacit design know-how compound",
+    "verdict": "Sustained, if learners still want a habit",
+    "highlight": true
+   },
+   {
+    "resource": "Duo brand and organic, creator-led marketing",
+    "type": "Resource (positional)",
+    "v": "Yes: cheap acquisition; marketing ~12% of revenue (est.)",
+    "r": "Yes: most recognized learning brand",
+    "i": "Path-dependent, but dented by the 2025 AI-first backlash",
+    "verdict": "Sustained, but fragile",
+    "highlight": true
+   },
+   {
+    "resource": "AI-generated courses and features",
+    "type": "Capability",
+    "v": "Yes: 148 courses built in one year at low cost",
+    "r": "No: every rival can use the same AI models",
+    "i": "Easy: models are bought from vendors",
+    "verdict": "Parity"
+   },
+   {
+    "resource": "Course catalog (40+ languages, math, music, chess)",
+    "type": "Resource",
+    "v": "Yes: more reasons to open the app",
+    "r": "Partly: few match the breadth",
+    "i": "Imitable: AI cuts the cost of copying",
+    "verdict": "Temporary advantage"
+   }
+  ],
+  "vri_takeaway": "Content is now cheap for everyone; the habit engine and brand are what rivals can't copy quickly."
+ },
+ "capture": {
+  "forces": [
+   {
+    "force": "Buyers (learners)",
+    "level": "High",
+    "logic": "Millions of fragmented learners, but switching is free and the core product is free; free AI tutors and YouTube raise their power. About 91% pay nothing (1 - 12.7M/140.6M), capping revenue per user.",
+    "firm_power": "Partly: streaks raise switching costs; DAUs +23% but bookings only +8% (Q2 2026)",
+    "highlight": true
+   },
+   {
+    "force": "Suppliers (app stores, AI model vendors)",
+    "level": "Medium",
+    "logic": "Apple and Google control distribution and take up to 30% of in-app subscriptions; AI vendors are few. A fragmented app industry facing a duopoly raises their power.",
+    "firm_power": "Partly: scale wins featuring; AI costs falling, but app-store fees unavoidable"
+   },
+   {
+    "force": "Rivalry",
+    "level": "Medium",
+    "logic": "Babbel, Busuu, Rosetta Stone and Memrise are smaller and fragmented; Duolingo leads by users, so rivalry is mostly on features, not price.",
+    "firm_power": "Yes: free price and scale no paid rival can match"
+   },
+   {
+    "force": "New entrants",
+    "level": "High",
+    "logic": "AI models make courses and tutors cheap to build; Speak and AI-native apps launch fast with little capital.",
+    "firm_power": "Partly: brand and habit, but entry barriers are falling"
+   },
+   {
+    "force": "Substitutes",
+    "level": "High",
+    "logic": "Free AI tutors (ChatGPT voice, Gemini) teach conversation; real-time translation reduces the need to learn at all.",
+    "firm_power": "Partly: adds its own AI features (Video Call); stock down about 80% from peak on this fear",
+    "highlight": true
+   },
+   {
+    "force": "Complements",
+    "level": "Low",
+    "logic": "Smartphones, social media creators and travel add value; few take a cut beyond the app stores.",
+    "firm_power": "Yes: creator content drives two-thirds of impressions in key markets"
+   }
+  ],
+  "takeaway": "Free AI substitutes and non-paying learners take the most value; Duolingo keeps value only while the habit stays."
+ },
+ "deliver": {
+  "statement": "A gamified habit engine, AI-built content, a freemium upsell, mascot-led organic marketing and new subjects form one engagement loop that serves casual learners for free, keeps cost per learner near zero, and holds users against free AI tutors; it refuses live teachers and paywalls.",
+  "activities": [
+   {
+    "activity": "Gamified habit engine and A/B testing (streaks, leagues)",
+    "define_link": "Casual learners who need motivation to keep going",
+    "create_link": "WTP from fun; cheap retention instead of paid re-acquisition",
+    "capture_link": "Streaks raise switching costs against free AI substitutes",
+    "highlight": true
+   },
+   {
+    "activity": "AI-first content and features (Video Call, Roleplay)",
+    "define_link": "Learners in many languages and subjects, wanting speaking practice",
+    "create_link": "Lowers cost per course (148 courses in one year)",
+    "capture_link": "Matches AI-tutor substitutes inside the app",
+    "highlight": true
+   },
+   {
+    "activity": "Freemium funnel (free core, Super upsell, longer trials)",
+    "define_link": "Price-sensitive mass market; serious learners pay",
+    "create_link": "Free is the lowest price; 12.7M payers fund the rest",
+    "capture_link": "Turns powerful free buyers into payers without friction"
+   },
+   {
+    "activity": "Mascot-led organic and creator marketing (Duo)",
+    "define_link": "Young, social-media-native learners",
+    "create_link": "Low acquisition cost (marketing ~12% of revenue, est.)",
+    "capture_link": "Brand awareness deters AI-native entrants"
+   },
+   {
+    "activity": "New subjects on the same engine (math, music, chess)",
+    "define_link": "Existing daily users with other learning goals",
+    "create_link": "Spreads the fixed engine over more courses",
+    "capture_link": "More daily reasons to open the app vs substitutes"
+   }
+  ],
+  "activities_takeaway": "The habit engine and AI content carry the strategy; the rest turns habit into revenue.",
+  "reinforcement": [
+   "More learners → more A/B test data → stickier lessons → longer streaks and buzz → more learners and payers",
+   "AI content → cheaper new courses and subjects → more daily reasons to open the app → longer streaks"
+  ],
+  "not_do": [
+   "No live human teachers (gives up conversation depth to tutors and Speak)",
+   "No paywall on core lessons (gives up revenue: about 91% pay nothing)",
+   "No heavy paid acquisition (relies on organic buzz the brand must keep earning)"
+  ],
+  "misaligned": [
+   "The 2025 \"AI-first\" contractor message angered users and dented the brand that drives organic growth",
+   "Tighter limits on free users (energy) added friction; 2026 longer free trials reverse it"
+  ],
+  "judgment": [
+   "Mostly organized: product, data and marketing all serve engagement; 2026 put DAUs (+23%) ahead of bookings (+8%), with EBITDA margin down to 25.9% from 31.2%"
+  ],
+  "takeaway": "The system depends on one thing: the habit staying more fun than a free AI tutor."
+ }
+}
