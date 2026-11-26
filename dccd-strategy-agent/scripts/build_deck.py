@@ -67,10 +67,11 @@ title_y, title_h = margin, 0.55
 rule_y = title_y + title_h + 0.10             # 1.00
 body_top = rule_y + gap                       # 1.27
 mark_w, mark_h = 2.52, 0.46                   # CMU Tepper wordmark, bottom left
-tartan_gold_y = 7.26                          # top of the gold stripe at the foot of the tartan strip
-foot_y = tartan_gold_y - mark_h               # 6.80, footer row: wordmark, source, page number
-corner = 0.25                                 # T logo and page number sit this far from the right edge
-logo_s = 0.55
+tartan_gold_bottom = 7.34                     # bottom of the gold stripe at the foot of the tartan strip
+mark_baseline = mark_h * 122 / 139            # baseline of "Tepper School of Business" inside the wordmark png
+foot_y = tartan_gold_bottom - mark_baseline   # 6.94, footer row: wordmark, source, page number
+corner = 0.22                                 # T logo and page number sit this far from the right edge
+logo_s = 0.72
 source_x = left + mark_w + 0.30
 takeaway_h = 0.50
 takeaway_y = foot_y - gap - takeaway_h        # 5.92
@@ -106,12 +107,12 @@ class StrategyDeck(lc.Deck):
         lc.gradient_rect(s, 0, 0, slide_w, slide_h, deep, darkest)
         s.shapes.add_picture(os.path.join(brand_dir, "tartan-strip.png"), 0, 0, Inches(sidebar_w), Inches(slide_h))
         name = company.upper()
-        name_size = 72 if lc._text_w(name, 72, True) <= 11.2 else 54
-        lc.text(s, 1.35, 0.95, 11.4, 1.55, name, name_size, white, bold=True, anchor="b", line=1.0)
-        lc.text(s, 1.35, 2.75, 11.0, 0.5, "STRATEGY ANALYSIS", 22, blush, bold=True, line=1.0)
-        lc.hline(s, 1.35, 3.55, 5.0, rose, 2.5)
-        lc.text(s, 1.35, 4.05, 11.0, 0.5, by, 18, white, line=1.0)
-        lc.text(s, 1.35, 4.60, 11.0, 0.45, datetime.date.today().strftime("%B %Y"), 15, blush, line=1.0)
+        name_size = next(z for z in (96, 84, 72, 60, 54) if lc._text_w(name, z, True) <= 11.4 or z == 54)
+        lc.text(s, 1.35, 1.55, 11.6, 1.75, name, name_size, white, bold=True, anchor="b", line=1.0)
+        lc.text(s, 1.35, 3.40, 11.0, 0.6, "STRATEGY ANALYSIS", 30, blush, bold=True, line=1.0)
+        lc.hline(s, 1.35, 4.25, 6.0, rose, 2.5)
+        lc.text(s, 1.35, 4.75, 11.0, 0.5, by, 18, white, line=1.0)
+        lc.text(s, 1.35, 5.30, 11.0, 0.45, datetime.date.today().strftime("%B %Y"), 15, blush, line=1.0)
         band_y = 6.40
         lc.rect(s, sidebar_w, band_y, slide_w - sidebar_w, slide_h - band_y, fill=white)
         lc.picture_fit(s, os.path.join(brand_dir, "cmu-wordmark.png"), 1.35, band_y + (slide_h - band_y - 0.55) / 2,
