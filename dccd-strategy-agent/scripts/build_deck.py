@@ -67,7 +67,10 @@ title_y, title_h = margin, 0.55
 rule_y = title_y + title_h + 0.10             # 1.00
 body_top = rule_y + gap                       # 1.27
 mark_w, mark_h = 2.52, 0.46                   # CMU Tepper wordmark, bottom left
-foot_y = slide_h - margin - mark_h            # 6.69, footer row: wordmark, source, page number
+tartan_gold_y = 7.26                          # top of the gold stripe at the foot of the tartan strip
+foot_y = tartan_gold_y - mark_h               # 6.80, footer row: wordmark, source, page number
+corner = 0.25                                 # T logo and page number sit this far from the right edge
+logo_s = 0.55
 source_x = left + mark_w + 0.30
 takeaway_h = 0.50
 takeaway_y = foot_y - gap - takeaway_h        # 5.92
@@ -102,11 +105,13 @@ class StrategyDeck(lc.Deck):
         s = self._new("cover")
         lc.gradient_rect(s, 0, 0, slide_w, slide_h, deep, darkest)
         s.shapes.add_picture(os.path.join(brand_dir, "tartan-strip.png"), 0, 0, Inches(sidebar_w), Inches(slide_h))
-        lc.text(s, 1.35, 1.65, 10.5, 1.0, company.upper(), 40, white, bold=True, anchor="b", line=1.0)
-        lc.text(s, 1.35, 2.80, 10.5, 0.5, "STRATEGY ANALYSIS", 16, blush, bold=True, line=1.0)
-        lc.text(s, 1.35, 3.55, 10.5, 0.4, by, 14, white, line=1.0)
-        lc.text(s, 1.35, 3.95, 10.5, 0.4, datetime.date.today().strftime("%B %Y"), 12, blush, line=1.0)
-        lc.hline(s, 1.35, 4.55, 4.2, rose, 2.0)
+        name = company.upper()
+        name_size = 72 if lc._text_w(name, 72, True) <= 11.2 else 54
+        lc.text(s, 1.35, 0.95, 11.4, 1.55, name, name_size, white, bold=True, anchor="b", line=1.0)
+        lc.text(s, 1.35, 2.75, 11.0, 0.5, "STRATEGY ANALYSIS", 22, blush, bold=True, line=1.0)
+        lc.hline(s, 1.35, 3.55, 5.0, rose, 2.5)
+        lc.text(s, 1.35, 4.05, 11.0, 0.5, by, 18, white, line=1.0)
+        lc.text(s, 1.35, 4.60, 11.0, 0.45, datetime.date.today().strftime("%B %Y"), 15, blush, line=1.0)
         band_y = 6.40
         lc.rect(s, sidebar_w, band_y, slide_w - sidebar_w, slide_h - band_y, fill=white)
         lc.picture_fit(s, os.path.join(brand_dir, "cmu-wordmark.png"), 1.35, band_y + (slide_h - band_y - 0.55) / 2,
@@ -117,13 +122,14 @@ class StrategyDeck(lc.Deck):
     def page(self, key, title, src):
         s = self._new("page", title=title)
         s.shapes.add_picture(os.path.join(brand_dir, "tartan-strip.png"), 0, 0, Inches(sidebar_w), Inches(slide_h))
-        lc.picture_fit(s, os.path.join(brand_dir, "tepper-T.png"), right - title_h, title_y, title_h, title_h, align="r")
+        lc.picture_fit(s, os.path.join(brand_dir, "tepper-T.png"), slide_w - corner - logo_s, corner, logo_s, logo_s,
+                       align="r")
         size = 26 if lc._text_w(title, 26, True) <= width - 0.8 else 22
         lc.text(s, left, title_y, width - 0.8, title_h, title, size, red, bold=True, anchor="m", line=1.0, wrap=False)
         lc.hline(s, left, rule_y, right, lc.rule, 0.75)
         lc.picture_fit(s, os.path.join(brand_dir, "cmu-wordmark.png"), left, foot_y, mark_w, mark_h, align="l")
-        lc.text(s, source_x, foot_y, right - 0.7 - source_x, mark_h, src, 9, gray, italic=True, anchor="m", line=1.0)
-        lc.text(s, right - 0.6, foot_y, 0.6, mark_h, str(len(self.prs.slides)), 10, gray, align="r", anchor="m",
+        lc.text(s, source_x, foot_y, right - source_x, mark_h, src, 9, gray, italic=True, anchor="m", line=1.0)
+        lc.text(s, slide_w - corner - 0.6, foot_y, 0.6, mark_h, str(len(self.prs.slides)), 10, gray, align="r", anchor="m",
                 line=1.0)
         if lc._text_w(title, 22, True) > width - 0.8:
             self.warnings.append(f"slide {len(self.prs.slides)}: title too long: '{title}'")
