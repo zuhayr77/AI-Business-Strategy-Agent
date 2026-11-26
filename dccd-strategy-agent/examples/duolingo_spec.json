@@ -1,62 +1,76 @@
 {
  "company": "Duolingo",
  "author": "Zuhayr Rahman Chowdhury",
- "competitive_advantage": "a habit engine (streaks, leagues) tuned by experiments on 58.7M daily users; rivals can copy features, not the data and habit.",
+ "competitive_advantage": "A habit engine (streaks, leagues) fine-tuned by testing on 58.7M daily users. Rivals can copy the features, but not the data or the habit.",
  "statements": {
-  "define": "For casual, self-motivated learners worldwide who want a language (now also math, music, chess) in minutes a day, Duolingo offers a free, game-like app replacing costly classes most people quit.",
-  "create": "Duolingo wins on lower cost: free to learners, near-zero cost per extra user (72.2% gross margin, 2025), with WTP from fun and streaks. The habit engine is sustained; content is now parity.",
-  "capture": "Substitutes and buyers take most value: free AI tutors, and about 91% of users pay nothing. Streaks keep learners (42% daily/monthly ratio), but app stores take a cut of subscriptions.",
-  "deliver": "A gamified habit engine, AI-built content, a freemium upsell and mascot-led marketing reinforce one engagement loop. Duolingo refuses live teachers and paywalls; the risk is free AI tutors becoming more fun."
+  "define": "Casual learners worldwide who want to learn a language (and now math, music or chess) in a few minutes a day. Duolingo gives them a free, game-like app instead of costly classes most people quit.",
+  "create": "On low cost, not premium features: the app is free, each extra user costs almost nothing (72.2% gross margin, 2025), and people stay because it is fun. The habit engine is hard to copy; the course content is not.",
+  "capture": "Learners hold most of the value: about 91% never pay, and free AI tutors are a growing alternative. Streaks keep people loyal (42% of monthly users open it daily), but Apple and Google take a cut of every subscription.",
+  "deliver": "Streaks and games, AI-built courses, a free-to-paid upgrade and viral mascot marketing feed one loop: more learners, more data, a stickier app. It refuses live teachers and paywalls; the main risk is free AI tutors becoming more fun."
  },
- "one_line": "Duolingo turns learning into a free daily habit; watch whether free AI tutors break the habit.",
+ "one_line": "Duolingo turns learning into a free daily habit; the big question is whether free AI tutors break that habit.",
  "chain": {
   "define": [
-   "**Who:** casual, self-motivated learners worldwide, mostly on smartphones",
-   "**What:** a free, game-like app for languages, math, music and chess",
-   "**Problem solved:** classes and paid apps cost money and willpower; most learners quit"
+   "**Customer:** casual learners worldwide, mostly on their phones",
+   "**Offer:** a free, game-like app for languages, math, music and chess",
+   "**Problem:** classes cost money and willpower, so most learners quit"
   ],
   "create": [
-   "**WTP vs. cost:** wedge from lower cost (free, near-zero marginal cost); WTP from fun",
-   "**Positioning map:** on the frontier at the lowest price, below tutors and Speak",
-   "**VRI:** habit engine and brand sustained; AI content only parity"
+   "**Edge:** lowest cost: free to users, almost no cost per extra user",
+   "**Why people stay:** fun, streaks and the Duo brand",
+   "**Will it last?** the habit engine and brand are hard to copy; content is not"
   ],
   "capture": [
-   "**Six forces:** substitutes (free AI tutors) and free-riding buyers are strongest",
-   "**Power:** streaks and brand hold learners; weaker against app-store fees"
+   "**Biggest threats:** free AI tutors, and users who never pay",
+   "**Defence:** streaks and the brand keep learners; app-store fees cannot be avoided"
   ],
   "deliver": [
-   "**Activities:** habit engine, AI content, freemium upsell, organic marketing, new subjects",
-   "**Fit:** more learners bring more test data, stickier lessons and more learners"
+   "**Key activities:** game design, AI-built courses, free-to-paid upgrade, viral marketing",
+   "**The loop:** more learners → more data → stickier lessons → more learners"
   ]
  },
  "define": {
   "who": [
-   "Casual, self-motivated learners worldwide (140.6M monthly users, Q2 2026), learning for travel, school or self-improvement",
-   "B2C freemium: the learner uses, decides and pays; about 9% pay (12.7M of 140.6M)"
+   "**Casual learners:** self-motivated people learning for travel, school or self-improvement",
+   "**Who pays:** the learner chooses and pays; most stay on the free version"
   ],
   "what": [
-   "Hired to make learning feel like a five-minute daily game they actually keep up",
-   "Today they use classes, tutors (Preply, italki), Babbel, Rosetta Stone, Speak, ChatGPT or nothing"
+   "**The offer:** a five-minute daily lesson that feels like a game",
+   "**Alternatives:** classes, tutors (Preply, italki), Babbel, Rosetta Stone, Speak, ChatGPT, or nothing"
   ],
   "problem": [
-   "Classes and tutors cost money and schedules; paid apps feel like work, so most learners quit",
-   "Duolingo closes the gap with a free app, streaks and game mechanics that keep learners returning"
+   "**The pain:** classes and tutors cost money and time; paid apps feel like work, so most people quit",
+   "**The fix:** a free app with streaks and game rewards that keeps people coming back"
   ],
-  "takeaway": "Weakest premise: that a game-like habit beats a free AI tutor that teaches real conversation."
+  "takeaway": "The biggest risk: a fun daily game losing out to a free AI tutor that can hold a real conversation.",
+  "stats": [
+   {
+    "value": "140.6M",
+    "label": "monthly users (Q2 2026)"
+   },
+   {
+    "value": "58.7M",
+    "label": "daily users"
+   },
+   {
+    "value": "~9%",
+    "label": "pay for a subscription (12.7M)"
+   }
+  ]
  },
  "create": {
   "wtp_vs_cost": [
-   "**Moves WTP:** fun, streaks and leagues, the Duo brand, AI features (Video Call)",
-   "**Table stakes:** many languages, mobile app, speech recognition",
-   "**Cost levers:** free core, near-zero cost per extra user, AI-built content, organic marketing",
-   "**Wedge:** lower cost: free to users with a 72.2% gross margin (2025)"
+   "**What people value:** fun, streaks and leagues, the Duo brand, AI features like Video Call",
+   "**Basics every app has:** many languages, a mobile app, speech recognition",
+   "**How it keeps cost low:** free core app, almost no cost per extra user, AI-built courses, viral marketing",
+   "**Result:** the lowest price (free) with a 72.2% gross margin (2025)"
   ],
   "map_reading": [
-   "Axes: learning results and engagement vs price to learner",
-   "Learners pick Duolingo for free, fun practice",
-   "Tutors and Speak sit higher; Babbel and Rosetta Stone inside"
+   "Up: better results; right: cheaper for the learner",
+   "Dashed line: the best value on offer today",
+   "Tutors and Speak give more but cost more; Babbel and Rosetta Stone fall behind"
   ],
-  "takeaway": "A low-cost position with a fun kicker, not a learning-depth premium.",
+  "takeaway": "Duolingo wins on low price plus fun, not on teaching depth.",
   "map": {
    "y_label": "Learning results and engagement",
    "x_label": "(price to learner)",
@@ -235,13 +249,51 @@
  },
  "titles": {
   "statements": "Duolingo Wins by Making Learning a Free Daily Habit",
-  "chain": "Each Stage Builds on a Free, Habit-Forming App",
-  "define": "Casual Learners Hire Duolingo to Keep a Daily Habit",
+  "chain": "Each Part Builds on a Free, Habit-Forming App",
+  "define": "Casual Learners Use Duolingo to Keep a Daily Habit",
   "create": "Duolingo Wins on Cost: Free to Learners, 72% Gross Margin",
-  "vri": "The Habit Engine and Brand Hold; AI Content Is Parity",
-  "capture": "Free AI Tutors and Non-Payers Take the Most Value",
-  "activities": "The Habit Engine and AI Content Carry the Strategy",
-  "fit": "The System Works Only While the Habit Beats Free AI"
+  "edge": "Only the Habit Engine and Brand Are Hard to Copy"
  },
- "source": "Duolingo FY2025 10-K; Q2 2026 shareholder letter; figures marked est. are estimates"
+ "source": "Duolingo FY2025 10-K; Q2 2026 shareholder letter; figures marked est. are estimates",
+ "chain_takeaway": "Every part rests on one thing: a free app people open every day.",
+ "advantage_table": [
+  {
+   "strength": "Streaks, leagues and constant testing (the habit engine)",
+   "why": "Keeps people coming back: 42% of monthly users open it daily",
+   "copy": "Hard: built on data from 58.7M daily users that no rival has",
+   "threat": "Free AI tutors pulling learners away",
+   "lasts": "Long-lasting, if people still want a daily habit",
+   "highlight": true
+  },
+  {
+   "strength": "The Duo owl brand and viral social media",
+   "why": "Brings in users cheaply; marketing about 12% of revenue (est.)",
+   "copy": "Hard to buy, but the 2025 \"AI-first\" backlash hurt it",
+   "threat": "New AI apps competing for attention",
+   "lasts": "Lasting, but fragile",
+   "highlight": true
+  },
+  {
+   "strength": "Free core app with a paid upgrade (Super)",
+   "why": "Free for most; 12.7M payers fund the rest",
+   "copy": "Hard for paid rivals, who need fees to survive",
+   "threat": "Learners who will not pay",
+   "lasts": "Lasting while payers keep growing"
+  },
+  {
+   "strength": "AI-made courses and features (Video Call, Roleplay)",
+   "why": "148 new courses in one year at low cost",
+   "copy": "Easy: every rival can use the same AI models",
+   "threat": "Free AI tutors (matches them inside the app)",
+   "lasts": "Short-lived: rivals catch up"
+  },
+  {
+   "strength": "New subjects on the same app (math, music, chess)",
+   "why": "More reasons to open the app each day",
+   "copy": "Partly: AI lowers the cost of copying",
+   "threat": "Other apps competing for daily time",
+   "lasts": "Short-lived"
+  }
+ ],
+ "edge_takeaway": "Only the habit engine and the brand are hard to copy; AI content and new subjects are easy to match."
 }

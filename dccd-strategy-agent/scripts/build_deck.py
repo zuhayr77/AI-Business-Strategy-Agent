@@ -61,31 +61,30 @@ slide_w, slide_h = 13.333, 7.5
 sidebar_w = 0.70
 left, right = 1.05, 12.40
 width = right - left
-margin = 0.35            # top of the title = bottom of the wordmark, from the slide edge
+margin = 0.35            # top of the action title, from the slide edge
 gap = 0.27               # one vertical and horizontal rhythm for every block
 title_y, title_h = margin, 0.55
 rule_y = title_y + title_h + 0.10             # 1.00
 body_top = rule_y + gap                       # 1.27
-mark_w, mark_h = 2.52, 0.46                   # CMU Tepper wordmark, bottom left
-tartan_gold_bottom = 7.34                     # bottom of the gold stripe at the foot of the tartan strip
-mark_baseline = mark_h * 122 / 139            # baseline of "Tepper School of Business" inside the wordmark png
-foot_y = tartan_gold_bottom - mark_baseline   # 6.94, footer row: wordmark, source, page number
-corner = 0.22                                 # T logo and page number sit this far from the right edge
-logo_s = 0.72
-source_x = left + mark_w + 0.30
-takeaway_h = 0.50
-takeaway_y = foot_y - gap - takeaway_h        # 5.92
-body_bottom = takeaway_y - gap                # 5.65
+mark_x, mark_y, mark_h = left, 6.675, 0.55    # CMU Tepper wordmark: same size and place as on the cover
+mark_w = mark_h * 760 / 139                   # 3.01, keeps the png's aspect ratio
+logo_x, logo_y, logo_s = 12.35, 0.15, 0.90    # Tepper T, top right
+num_right = logo_x + logo_s                   # page number right edge lines up with the T
+foot_y, foot_h = mark_y, mark_h               # footer row: wordmark, source, page number
+source_x = mark_x + mark_w + 0.30
+bar_h = 0.78                                  # key takeaway and competitive advantage bars
+takeaway_y = foot_y - gap - bar_h             # 5.63
+body_bottom = takeaway_y - gap                # 5.36
+
+stage_label = {"define": "Who it serves", "create": "How it wins", "capture": "Who keeps the value",
+               "deliver": "How it delivers"}
 
 default_titles = {
-    "statements": "{c}'s Strategy in Four Statements",
-    "chain": "Each Stage of {c}'s Strategy Feeds the Next",
-    "define": "Who, What, and the Problem Solved",
-    "create": "Why Customers Pay More Than It Costs",
-    "vri": "Can the Resources Behind the Position Hold It?",
-    "capture": "How Much of the Value Stays With {c}",
-    "activities": "Which Activities {c} Must Do Well",
-    "fit": "Do {c}'s Activities Fit and Reinforce Each Other?",
+    "statements": "{c}'s Strategy in Four Parts",
+    "chain": "How Each Part of {c}'s Strategy Builds on the Next",
+    "define": "Who {c} Serves and Why They Choose It",
+    "create": "Why Customers Choose {c} Over the Alternatives",
+    "edge": "What Rivals Can and Cannot Copy",
 }
 
 
@@ -107,30 +106,28 @@ class StrategyDeck(lc.Deck):
         lc.gradient_rect(s, 0, 0, slide_w, slide_h, deep, darkest)
         s.shapes.add_picture(os.path.join(brand_dir, "tartan-strip.png"), 0, 0, Inches(sidebar_w), Inches(slide_h))
         name = company.upper()
-        name_size = next(z for z in (96, 84, 72, 60, 54) if lc._text_w(name, z, True) <= 11.4 or z == 54)
-        lc.text(s, 1.35, 1.55, 11.6, 1.75, name, name_size, white, bold=True, anchor="b", line=1.0)
-        lc.text(s, 1.35, 3.40, 11.0, 0.6, "STRATEGY ANALYSIS", 30, blush, bold=True, line=1.0)
+        name_size = 72 if lc._text_w(name, 72, True) <= 11.6 else 54
+        lc.text(s, 1.25, 1.99, 11.8, 1.15, name, name_size, white, bold=True, line=1.0)
+        lc.text(s, 1.35, 3.40, 11.0, 0.5, "STRATEGY ANALYSIS", 26, blush, bold=True, line=1.0)
         lc.hline(s, 1.35, 4.25, 6.0, rose, 2.5)
-        lc.text(s, 1.35, 4.75, 11.0, 0.5, by, 18, white, line=1.0)
-        lc.text(s, 1.35, 5.30, 11.0, 0.45, datetime.date.today().strftime("%B %Y"), 15, blush, line=1.0)
+        lc.text(s, 1.35, 4.75, 11.0, 0.4, by, 18, white, line=1.0)
+        lc.text(s, 1.35, 5.30, 11.0, 0.35, datetime.date.today().strftime("%B %Y"), 15, blush, line=1.0)
         band_y = 6.40
         lc.rect(s, sidebar_w, band_y, slide_w - sidebar_w, slide_h - band_y, fill=white)
-        lc.picture_fit(s, os.path.join(brand_dir, "cmu-wordmark.png"), 1.35, band_y + (slide_h - band_y - 0.55) / 2,
-                       3.2, 0.55, align="l")
+        lc.picture_fit(s, os.path.join(brand_dir, "cmu-wordmark.png"), mark_x, mark_y, mark_w, mark_h, align="l")
         self.meta[s.slide_id]["n_furniture"] = len(s.shapes)
         return s
 
     def page(self, key, title, src):
         s = self._new("page", title=title)
         s.shapes.add_picture(os.path.join(brand_dir, "tartan-strip.png"), 0, 0, Inches(sidebar_w), Inches(slide_h))
-        lc.picture_fit(s, os.path.join(brand_dir, "tepper-T.png"), slide_w - corner - logo_s, corner, logo_s, logo_s,
-                       align="r")
+        lc.picture_fit(s, os.path.join(brand_dir, "tepper-T.png"), logo_x, logo_y, logo_s, logo_s, align="r")
         size = 26 if lc._text_w(title, 26, True) <= width - 0.8 else 22
         lc.text(s, left, title_y, width - 0.8, title_h, title, size, red, bold=True, anchor="m", line=1.0, wrap=False)
         lc.hline(s, left, rule_y, right, lc.rule, 0.75)
-        lc.picture_fit(s, os.path.join(brand_dir, "cmu-wordmark.png"), left, foot_y, mark_w, mark_h, align="l")
-        lc.text(s, source_x, foot_y, right - source_x, mark_h, src, 9, gray, italic=True, anchor="m", line=1.0)
-        lc.text(s, slide_w - corner - 0.6, foot_y, 0.6, mark_h, str(len(self.prs.slides)), 10, gray, align="r", anchor="m",
+        lc.picture_fit(s, os.path.join(brand_dir, "cmu-wordmark.png"), mark_x, mark_y, mark_w, mark_h, align="l")
+        lc.text(s, source_x, foot_y, right - source_x, foot_h, src, 9, gray, italic=True, anchor="m", line=1.0)
+        lc.text(s, num_right - 0.6, foot_y, 0.6, foot_h, str(len(self.prs.slides)), 10, gray, align="r", anchor="m",
                 line=1.0)
         if lc._text_w(title, 22, True) > width - 0.8:
             self.warnings.append(f"slide {len(self.prs.slides)}: title too long: '{title}'")
@@ -140,29 +137,27 @@ class StrategyDeck(lc.Deck):
 
 # ---------- components ----------
 
-def takeaway(s, content):
-    """Key takeaway bar that closes every slide: tinted, red rail, bold dark red text."""
-    lc.rect(s, left, takeaway_y, width, takeaway_h, fill=tint)
-    lc.rect(s, left, takeaway_y, 0.07, takeaway_h, fill=red)
-    lc.text(s, left + 0.30, takeaway_y + 0.04, width - 0.5, takeaway_h - 0.08,
-            f"[[Key takeaway:]]  {content}", 12.5, skibo, bold=True, anchor="m", line=1.0)
-
-
-def tile(s, x, y, w, h, label, content, size=12):
-    """Stat-tile style panel: grey, red left rail, small red caps label, body text."""
-    lc.rect(s, x, y, w, h, fill=panel)
+def bar(s, y, label, content, x=left, w=width, h=bar_h):
+    """Tinted bar with a red rail: small red caps label, then the bold message on a new line.
+    Used for both the key takeaway and the competitive advantage."""
+    lc.rect(s, x, y, w, h, fill=tint)
     lc.rect(s, x, y, 0.07, h, fill=red)
-    lc.text(s, x + 0.28, y + 0.10, w - 0.45, 0.24, label.upper(), 9.5, red, bold=True, line=1.0)
-    lc.text(s, x + 0.28, y + 0.36, w - 0.45, h - 0.44, content, size, ink, line=1.1)
+    tb, tf = lc.tbox(s, x + 0.30, y + 0.06, w - 0.50, h - 0.12, anchor="m")
+    lc.para(tf, label.upper(), 9.5, red, bold=True, first=True, after=3, line=1.0)
+    lc.para(tf, content, 12.5, skibo, bold=True, after=0, line=1.05)
+
+
+def takeaway(s, content):
+    bar(s, takeaway_y, "Key takeaway", content)
 
 
 def card(s, x, y, w, h, title, color, items, size=12):
-    """Grey card with a coloured top rule, stage-coloured title and square bullets."""
+    """Grey card with a coloured top rule, title centred between the rule and the dashed line, square bullets."""
     lc.rect(s, x, y, w, h, fill=panel)
     lc.rect(s, x, y, w, 0.06, fill=color)
-    lc.text(s, x + 0.22, y + 0.14, w - 0.44, 0.34, title, 16, color, bold=True, line=1.0)
-    lc.hline(s, x + 0.22, y + 0.52, x + w - 0.22, lc.rule, 0.75, "dash")
-    lc.bullets(s, x + 0.22, y + 0.64, w - 0.44, h - 0.76, items, size=size, gap=5)
+    lc.text(s, x + 0.22, y + 0.06, w - 0.44, 0.48, title, 16, color, bold=True, anchor="m", line=1.0)
+    lc.hline(s, x + 0.22, y + 0.54, x + w - 0.22, lc.rule, 0.75, "dash")
+    lc.bullets(s, x + 0.22, y + 0.68, w - 0.44, h - 0.80, items, size=size, gap=5)
 
 
 def table_height(gf):
@@ -221,11 +216,20 @@ def fitted_table(s, y, data, col_w, max_bottom, highlight_rows=(), row_h=0.5, si
 def statements_slide(d, spec, src):
     s = d.page("statements", spec["titles"]["statements"], src)
     st = spec["statements"]
-    rows = [(k.capitalize(), None, [st[k]]) for k in ("define", "create", "capture", "deliver")]
-    tile_h = 0.80
-    lc.band_table(s, left, body_top, width, rows, label_w=1.75, h=body_bottom - tile_h - gap - body_top + 0.02,
-                  size=12, label_size=15)
-    tile(s, left, body_bottom - tile_h, width, tile_h, "Competitive advantage", spec["competitive_advantage"])
+    keys = ("define", "create", "capture", "deliver")
+    n = len(keys)
+    row_h = (body_bottom - bar_h - gap - body_top) / n
+    label_w = 2.05
+    for i, k in enumerate(keys):
+        yy = body_top + i * row_h
+        box = lc.rect(s, left, yy, label_w, row_h - 0.04, fill=lc.band_fills[i])
+        lc.shape_text(box, stage_label[k], 15, white, align="c", anchor="m")
+        if i % 2 == 1:
+            lc.rect(s, left + label_w + 0.02, yy, width - label_w - 0.02, row_h - 0.04, fill=hexc("F9F9F9"))
+        lc.text(s, left + label_w + 0.25, yy + 0.04, width - label_w - 0.40, row_h - 0.12, st[k], 12, ink,
+                anchor="m", line=1.15)
+        lc.hline(s, left + label_w, yy + row_h - 0.02, right, blush, 1.0, "dash")
+    bar(s, body_bottom - bar_h, "Competitive advantage", spec["competitive_advantage"])
     takeaway(s, spec["one_line"])
 
 
@@ -237,7 +241,7 @@ def chain_slide(d, spec, src):
     for i, key in enumerate(("define", "create", "capture", "deliver")):
         x = left + (i % 2) * (cw + gap)
         y = body_top + (i // 2) * (ch_h + gap)
-        card(s, x, y, cw, ch_h, key.capitalize(), stage_fill[key], ch[key], size=11)
+        card(s, x, y, cw, ch_h, stage_label[key], stage_fill[key], ch[key], size=11.5)
     takeaway(s, spec.get("chain_takeaway") or spec["one_line"])
 
 
@@ -245,13 +249,31 @@ def define_slide(d, spec, src):
     df = spec["define"]
     s = d.page("define", spec["titles"]["define"], src)
     cw = (width - 2 * gap) / 3
-    cols = [("Who is the customer?", df["who"]), ("What is the offer?", df["what"]),
+    cols = [("Who is the customer?", df["who"]), ("What do they get?", df["what"]),
             ("What problem does it solve?", df["problem"])]
+    y = body_top
+    stats = df.get("stats", [])[:3]
+    if stats:
+        sh = 1.05
+        for i, st in enumerate(stats):
+            x = left + i * (cw + gap)
+            lc.rect(s, x, y, cw, sh, fill=tint)
+            lc.text(s, x, y + 0.10, cw, 0.55, st["value"], 30, red, bold=True, align="c", anchor="m", line=1.0)
+            lc.text(s, x + 0.15, y + 0.66, cw - 0.30, 0.30, st["label"], 11, ink, align="c", anchor="t", line=1.0)
+        y += sh + gap
+    head_h = 0.50
     for i, (head, items) in enumerate(cols):
         x = left + i * (cw + gap)
-        lc.rect(s, x, body_top, cw, 0.06, fill=lc.band_fills[i])
-        lc.header_strip(s, x, body_top + 0.06, cw, head, h=0.55, size=15)
-        lc.dashed_items(s, x, body_top + 0.61 + gap, cw, items, size=12.5, h=body_bottom - body_top - 0.61 - gap)
+        hb = lc.rect(s, x, y, cw, head_h, fill=lc.band_fills[i])
+        lc.shape_text(hb, head, 14, white, bold=True, align="c", anchor="m")
+        lc.rect(s, x, y + head_h, cw, body_bottom - y - head_h, fill=panel)
+        items = as_list(items)
+        ih = (body_bottom - y - head_h) / len(items)
+        for j, it in enumerate(items):
+            iy = y + head_h + j * ih
+            lc.text(s, x + 0.22, iy + 0.06, cw - 0.44, ih - 0.12, it, 12, ink, anchor="m", line=1.15)
+            if j < len(items) - 1:
+                lc.hline(s, x + 0.22, iy + ih, x + cw - 0.22, lc.rule, 0.75, "dash")
     takeaway(s, first(df["takeaway"]))
 
 
@@ -268,7 +290,7 @@ def positioning_map(s, m, x0, y0, w, h):
     ax, ay_top, ay_bot, ax_r = x0 + 0.55, y0 + 1.05, y0 + h - 0.45, x0 + w - 0.20
     lc.line(s, ax, ay_top, ax, ay_bot, iron, 1.25)
     lc.line(s, ax, ay_bot, ax_r, ay_bot, iron, 1.25)
-    lab = lc.text(s, x0 - 0.92, y0 + 2.45, 2.30, 0.26, "Higher willingness to pay  >", 9.5, iron, bold=True,
+    lab = lc.text(s, x0 - 0.92, y0 + 2.45, 2.30, 0.26, "Customers value it more  >", 9.5, iron, bold=True,
                   align="c", line=1.0)
     lab.rotation = 270
     lc.text(s, ax, ay_bot + 0.07, ax_r - ax, 0.24, "Lower cost  >", 9.5, iron, bold=True, align="r", line=1.0)
@@ -289,7 +311,7 @@ def positioning_map(s, m, x0, y0, w, h):
     if st is not None:
         curve._element.remove(st)
     fx, fy = pos(6.6, frontier_y(6.6))
-    lc.text(s, fx + 0.12, fy - 0.50, 1.4, 0.24, "Competitive frontier", 9, rose, italic=True, line=1.0)
+    lc.text(s, fx + 0.12, fy - 0.50, 1.4, 0.24, "Best value on offer", 9, rose, italic=True, line=1.0)
     for f in m["firms"]:
         xv, yv = float(f["x"]), float(f["y"])
         if f.get("frontier") or yv > frontier_y(xv):
@@ -310,76 +332,39 @@ def create_slide(d, spec, src):
     cr = spec["create"]
     s = d.page("create", spec["titles"]["create"], src + "; map positions are illustrative, not measured")
     lw = 5.55
-    lc.header_strip(s, left, body_top, lw, "Willingness to pay vs. cost", h=0.48, size=14)
-    lc.bullets(s, left + 0.12, body_top + 0.62, lw - 0.15, 2.05, cr["wtp_vs_cost"], size=11.5, gap=6)
-    lc.header_strip(s, left, body_top + 2.80, lw, "Reading the map", h=0.48, size=14)
-    lc.bullets(s, left + 0.12, body_top + 3.42, lw - 0.15, body_bottom - body_top - 3.42, cr["map_reading"],
+    lc.header_strip(s, left, body_top, lw, "Why customers choose it, and what it costs", h=0.48, size=14)
+    lc.bullets(s, left + 0.12, body_top + 0.62, lw - 0.15, 1.80, cr["wtp_vs_cost"], size=11.5, gap=5)
+    lc.header_strip(s, left, body_top + 2.55, lw, "Reading the map", h=0.48, size=14)
+    lc.bullets(s, left + 0.12, body_top + 3.17, lw - 0.15, body_bottom - body_top - 3.17, cr["map_reading"],
                size=11.5, gap=3)
     positioning_map(s, cr["map"], left + lw + gap, body_top, width - lw - gap, body_bottom - body_top)
     takeaway(s, first(cr["takeaway"]))
 
 
-def vri_slide(d, spec, src):
-    cr = spec["create"]
-    s = d.page("vri", spec["titles"]["vri"], src)
-    data = [["Resource / capability", "Type", "Valuable?", "Rare?", "Costly to imitate?", "Verdict"]]
+def edge_slide(d, spec, src):
+    """One table: what the firm has or does, why it matters, whether rivals can copy it,
+    the threat it guards against, and how long the edge lasts."""
+    s = d.page("edge", spec["titles"]["edge"], src)
+    rows = spec.get("advantage_table")
+    if rows:
+        data = [["What the company has or does", "Why it matters", "Can rivals copy it?",
+                 "Threat it guards against", "How long it lasts"]]
+        keys = ("strength", "why", "copy", "threat", "lasts")
+        col_w = [2.45, 2.45, 2.25, 2.25, 1.95]
+    else:
+        rows = [{"strength": r["resource"], "why": r["v"], "copy": r["i"], "lasts": r["verdict"],
+                 "highlight": r.get("highlight")} for r in spec["create"]["vri"]]
+        data = [["What the company has or does", "Why it matters", "Can rivals copy it?", "How long it lasts"]]
+        keys = ("strength", "why", "copy", "lasts")
+        col_w = [3.0, 3.0, 3.0, 2.35]
     hl = []
-    for i, r in enumerate(cr["vri"], start=1):
-        data.append([r["resource"], r["type"], r["v"], r["r"], r["i"], r["verdict"]])
+    for i, r in enumerate(rows, start=1):
+        data.append([r[k] for k in keys])
         if r.get("highlight"):
             hl.append(i)
-    tile_h = 0.80
-    fitted_table(s, body_top, data, [2.5, 1.35, 2.05, 1.95, 2.15, 1.35], body_bottom - tile_h - gap, hl, row_h=0.62)
-    tile(s, left, body_bottom - tile_h, width, tile_h, "Competitive advantage", spec["competitive_advantage"])
-    takeaway(s, first(cr["vri_takeaway"]))
-
-
-def capture_slide(d, spec, src):
-    cp = spec["capture"]
-    s = d.page("capture", spec["titles"]["capture"], src)
-    data = [["Force", "Power", "What drives it, and what it does to margin", "Does the firm push back, vs. rivals?"]]
-    hl = []
-    for i, f in enumerate(cp["forces"], start=1):
-        data.append([f["force"], f["level"], f["logic"], f["firm_power"]])
-        if f.get("highlight"):
-            hl.append(i)
-    gf, _ = fitted_table(s, body_top, data, [1.9, 0.85, 5.05, 3.55], body_bottom, hl, row_h=0.6)
-    for ri in range(1, len(data)):
-        c = gf.table.cell(ri, 1)
-        for p in c.text_frame.paragraphs:
-            for r in p.runs:
-                r.font.bold = True
-                r.font.color.rgb = red if data[ri][1].lower().startswith("high") else (
-                    iron if data[ri][1].lower().startswith("low") else ink)
-    takeaway(s, first(cp["takeaway"]))
-
-
-def activities_slide(d, spec, src):
-    dv = spec["deliver"]
-    s = d.page("activities", spec["titles"]["activities"], src)
-    tile(s, left, body_top, width, 0.90, "Deliver statement", dv["statement"], size=11.5)
-    data = [["Key activity", "Delivers Define (who it serves)", "Reinforces Create (WTP or cost)",
-             "Reinforces Capture (force it defends)"]]
-    hl = []
-    for i, a in enumerate(dv["activities"], start=1):
-        data.append([a["activity"], a["define_link"], a["create_link"], a["capture_link"]])
-        if a.get("highlight"):
-            hl.append(i)
-    fitted_table(s, body_top + 0.90 + gap, data, [2.75, 2.85, 2.85, 2.9], body_bottom, hl, row_h=0.46)
-    takeaway(s, first(dv["activities_takeaway"]))
-
-
-def fit_slide(d, spec, src):
-    dv = spec["deliver"]
-    s = d.page("fit", spec["titles"]["fit"], src)
-    rows = [
-        ("Reinforcing choices", "how activities feed each other", as_list(dv["reinforcement"])),
-        ("Trade-offs", "what the firm won't do", dv["not_do"]),
-        ("Misaligned", "what works against the position", as_list(dv.get("misaligned", ["None material"]))),
-        ("Organized?", "judgment", as_list(dv.get("judgment", []))),
-    ]
-    lc.band_table(s, left, body_top, width, rows, label_w=2.1, h=body_bottom - body_top + 0.02, size=12, label_size=15)
-    takeaway(s, first(dv["takeaway"]))
+    fitted_table(s, body_top, data, col_w, body_bottom, hl, row_h=0.55)
+    edge = spec.get("edge_takeaway") or first(spec["create"].get("vri_takeaway", spec["one_line"]))
+    takeaway(s, edge)
 
 
 def check(d):
@@ -426,10 +411,7 @@ def build(spec_path, out_path):
     chain_slide(d, spec, src)
     define_slide(d, spec, src)
     create_slide(d, spec, src)
-    vri_slide(d, spec, src)
-    capture_slide(d, spec, src)
-    activities_slide(d, spec, src)
-    fit_slide(d, spec, src)
+    edge_slide(d, spec, src)
     problems = check(d)
     for p in problems:
         print("WARNING:", p)

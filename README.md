@@ -2,7 +2,7 @@
 
 A Claude Skill that turns one question, **"Give me [company]'s strategy"**, into a researched, consulting-style strategy deck.
 
-The agent researches the company from public filings and news, then runs the **Define, Create, Capture, Deliver (DCCD)** framework in order, so each stage feeds the next. A Python pipeline renders the result as a 9-slide PowerPoint deck. The agent also answers follow-up questions concisely and defends its conclusions when challenged.
+The agent researches the company from public filings and news, then runs the **Define, Create, Capture, Deliver (DCCD)** framework in order, so each stage feeds the next. A Python pipeline renders the result as a 6-slide PowerPoint deck written for a general business reader. The agent also answers follow-up questions concisely and defends its conclusions when challenged.
 
 Built at Carnegie Mellon's Tepper School of Business (MSBA), where it was tested live on an unseen company.
 
@@ -13,22 +13,19 @@ Built at Carnegie Mellon's Tepper School of Business (MSBA), where it was tested
 | # | Slide | What it answers |
 |---|---|---|
 | 1 | Title | |
-| 2 | DCCD statements | The strategy in four statements, plus the competitive advantage |
-| 3 | DCCD chain | How each stage feeds the next |
-| 4 | Define | Who is the customer, what is the offer, what problem it solves |
-| 5 | Create (map) | Willingness to pay vs. cost, plus a competitive positioning map |
-| 6 | Create (VRI) | Are the resources Valuable, Rare and Inimitable? |
-| 7 | Capture | Six forces: how much value stays with the firm |
-| 8 | Deliver (activities) | Key activities, each linked to Define, Create and Capture |
-| 9 | Deliver (fit) | Reinforcing choices, trade-offs, misaligned activities, judgment |
+| 2 | Strategy in four parts | Who it serves, how it wins, who keeps the value, how it delivers, plus the competitive advantage |
+| 3 | How the parts connect | How each part builds on the next |
+| 4 | Customer | Key customer numbers; who the customer is, what they get, what problem it solves |
+| 5 | Positioning | What customers value vs. what it costs, plus a competitive positioning map |
+| 6 | What rivals can copy | One table: each strength, why it matters, whether rivals can copy it, the threat it guards against, how long it lasts |
 
-| Positioning map | Six forces |
+| Positioning map | What rivals can copy |
 |---|---|
-| ![Create slide](docs/create_map.png) | ![Capture slide](docs/capture.png) |
+| ![Positioning slide](docs/create_map.png) | ![Copy slide](docs/edge.png) |
 
-| DCCD chain | Activity fit |
+| How the parts connect | Customer |
 |---|---|
-| ![Chain slide](docs/chain.png) | ![Deliver slide](docs/deliver_fit.png) |
+| ![Chain slide](docs/chain.png) | ![Customer slide](docs/customer.png) |
 
 ## How it works
 
